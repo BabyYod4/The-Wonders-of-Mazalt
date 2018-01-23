@@ -1,0 +1,7 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MainScreen_.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(24): note: while compiling class template member function 'void map_tile_matrix<60,60>::init(void)'
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(70): note: see reference to function template instantiation 'void map_tile_matrix<60,60>::init(void)' being compiled
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\game_map.hpp(13): note: see reference to class template instantiation 'map_tile_matrix<60,60>' being compiled
+  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(46): note: see reference to class template instantiation 'game_map<60,60>' being compiled

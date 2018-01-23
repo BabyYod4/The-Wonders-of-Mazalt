@@ -1,6 +1,0 @@
-﻿  main.cpp
-c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(24): note: while compiling class template member function 'void map_tile_matrix<20,20>::init(void)'
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(70): note: see reference to function template instantiation 'void map_tile_matrix<20,20>::init(void)' being compiled
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\game_map.hpp(13): note: see reference to class template instantiation 'map_tile_matrix<20,20>' being compiled
-  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(54): note: see reference to class template instantiation 'game_map<20,20>' being compiled
