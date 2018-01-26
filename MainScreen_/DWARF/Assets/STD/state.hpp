@@ -10,7 +10,7 @@ struct state {
 	const int id;
 	const int next_state;
 	const std::string state_name;
-	std::vector<_event_> events;
+	std::vector<_event_> events = { _event_ {} };
 	std::function< void(void) > task = [=]()->void {};
 };
 

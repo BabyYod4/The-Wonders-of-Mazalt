@@ -15,6 +15,7 @@ class map_tile_matrix {
 
 private:
 	std::array< std::array< tile_data, COL>, ROW > matrix;
+	const int & data_id;
 	const std::string & dir_path_data;
 	const std::string & dir_name_textures;
 	const sf::Vector2i & tile_size;
@@ -27,23 +28,24 @@ private:
 		std::string line;
 		int row = 0;
 		int col = 0;
-		int file_nr = 0;
-		
+
+		matrix[0][0].texture = (TEXTURES + dir_name_textures + "/" + filename_prefix + file_extention);
+
 		while (std::getline(file, line)) {
 			std::vector<std::string> v{ explode(line, ',') };
+
 			for (auto n : v) {
 				tile_data & element = matrix[row][col];
 				int id = std::atoi(n.c_str());
-				if (id == 14949) { element.level = 1; };
+				if (id == data_id) { element.level = 1; };
 				
 				element.size = tile_size;
 				element.pos = sf::Vector2f(tile_size.x * col, tile_size.y * row);
 				element.mid = sf::Vector2f( (element.pos.x + (tile_size.x/2)), (element.pos.y + (tile_size.y / 2)) );
 
-				element.texture = (TEXTURES + dir_name_textures + "/" + filename_prefix + std::to_string(file_nr) + file_extention);
+				/*element.texture = (TEXTURES + dir_name_textures + "/" + filename_prefix + file_extention);*/
 
 				++col;
-				++file_nr;
 			}
 			col = 0;
 			++row;
@@ -55,12 +57,14 @@ private:
 
 public: 
 	map_tile_matrix( 
+		const int & data_id,
 		const std::string & dir_path_data, 
 		const std::string & dir_name_textures, 
 		const sf::Vector2i & tile_size,
 		const std::string & filename_prefix = std::string(""), 
 		const std::string & file_extention = std::string(".png")
 	):
+		data_id(data_id),
 		dir_path_data(dir_path_data),
 		dir_name_textures(dir_name_textures),
 		tile_size(tile_size),

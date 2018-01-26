@@ -1,36 +1,43 @@
 #ifndef GAME_MAP_HPP
 #define GAME_MAP_HPP
 
-#include <Assets/Scripts/Boundary/map_tile.hpp>
 #include <Assets/Scripts/Entity/map_tile_matrix.hpp>
 #include <Assets\Scripts\ADT\settings.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
 template< int ROW, int COL>
 class game_map {
 private:
 	map_tile_matrix<ROW, COL> map_data;
-	std::array< std::array< tile_data, COL>, ROW > matrix;
 	sf::RenderWindow & window;
-	map_tile tile;
-
+	sf::Sprite map;
+	sf::Texture texture;
 public:
+	std::array< std::array< tile_data, COL>, ROW > matrix;
+
 	game_map(sf::RenderWindow & window, const settings::tile_matrix::options & settings) :
-		map_data(settings.data_folder, settings.sprite_folder, settings.tile_size, settings.file_name_prefix, settings.file_extention),
+		map_data(settings.data_id, settings.data_folder, settings.sprite_folder, settings.tile_size, settings.file_name_prefix, settings.file_extention),
 		matrix( map_data.get() ),
-		window(window),
-		tile(window)
-	{}
+		window(window)
+	{
+		texture.loadFromFile(TEXTURES + settings.sprite_folder + "/" + settings.file_name_prefix + settings.file_extention);
+		texture.setRepeated(false);
+		map.setTexture(texture);
+		map.setPosition(sf::Vector2f{ 0,0 });
+	}
+
+	std::array< std::array< tile_data, COL>, ROW > get() { return matrix; }
 
 	void redraw() {
 		window.clear();
-		draw();
+		window.draw(map);
 	}
 
 	void draw() {
 		window.clear();
-		for (auto & row : matrix) { for (auto & elem : row) { tile.draw(elem); } }
+		window.draw(map);
 		window.display();
 	}
 
@@ -38,23 +45,12 @@ public:
 		window.clear();
 	}
 
-
-	void remove_tile(const sf::Vector2i & tile_pos) {
-		tile.remove(matrix[tile_pos.y][tile_pos.x]);
+	void display() {
+		window.display();
 	}
 
-	void remove_tile(tile_data & t) {
-		tile.remove(t);
-	}
 
-	void redraw_tile(const sf::Vector2i & tile_pos) {
-		tile.draw(matrix[tile_pos.y][tile_pos.x]);
-	}
 
-	void redraw_tile(tile_data & t) {
-		tile.draw(t);
-	}
-	
 };
 
 

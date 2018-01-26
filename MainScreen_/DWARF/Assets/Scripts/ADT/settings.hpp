@@ -20,6 +20,7 @@ namespace settings {
 	namespace tile_matrix {
 
 		struct options {
+			int data_id;
 			std::string data_folder;
 			std::string sprite_folder;
 			sf::Vector2i tile_size;

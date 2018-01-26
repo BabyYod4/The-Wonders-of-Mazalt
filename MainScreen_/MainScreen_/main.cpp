@@ -7,15 +7,18 @@
 #include <Assets\Animations\text_fade\text_fade.hpp>
 #include <Assets\Scripts\Control\music_player.hpp>
 #include <Assets\Scripts\ADT\settings.hpp>
-#include <Assets\Scripts\Boundary\map_tile.hpp>
 #include <Assets\Scripts\Control\game_map.hpp>
 #include <Assets\STD\include.hpp>
-
+#include <Assets\Scripts\Control\player_data.hpp>
+#include <Assets\Scripts\ADT\tile_coordinate.hpp>
+#include <Assets\Scripts\Control\camera.hpp>
 
 int main(void) {
 	sf::RenderWindow window{ sf::VideoMode{ 640, 360 }, "Wonders of Mazalt" };
-	window.setFramerateLimit(120);
-	window.setVerticalSyncEnabled(false);
+	camera cam(window, sf::Vector2f{ 640, 360 });
+
+	window.setFramerateLimit(60);
+	window.setVerticalSyncEnabled(true);
 	sf::Event event;
 
 	text_fade intro(
@@ -28,7 +31,7 @@ int main(void) {
 		}
 	);
 
-	music_player player(
+	music_player music(
 		settings::music_player::options{
 			AUDIO + "music/opening.ogg" , 50, 1.0, true
 		}
@@ -37,64 +40,22 @@ int main(void) {
 	game_map<60, 60> level(
 		window,
 		settings::tile_matrix::options{
-			std::string("test_map/data.csv"), // data map
+			14949,
+			std::string("test_map/data.csv"),	   // data map
 			std::string("test_map_data"),          // naam sprite map
-			sf::Vector2i{ 16, 16 },         // tegel grote
-			std::string("test_map"),           // spritenaam prefix
-			std::string(".png")				// optioneel file extention
+			sf::Vector2i{ 16, 16 },                // tegel grote
+			std::string("wonders_of_mazalt_v3"),   // spritenaam prefix
+			std::string(".png")				       // optioneel file extention
 		}
 	);
 
-	std::vector<state> states = {
-		state{
-			0, 1,
-			std::string("play_intro_music"),
-			std::vector<_event_>{ _event_{} },
-			[&player]()->void { player.play(); }
-		},
 
-		state{
-			1, 1,
-			std::string("wait_for_enter_key"),
-			std::vector<_event_>{
-
-				_event_{
-					2,
-					std::string("Enter is pressed"),
-					[]()->bool { return sf::Keyboard::isKeyPressed(sf::Keyboard::Return);  },
-					[&player]()->void {
-						player.change_track(AUDIO + "Music/Field.ogg");
-					}
-				}
-			},
-			[&intro, &window]()->void { intro.fade(window);  }
-		},
-
-		state{
-			2, 3,
-			std::string("show_map"),
-			std::vector<_event_>{ _event_{} },
-			[&level]()->void { level.draw();  }
-		},
-
-		state{
-			3, 3,
-			std::string("idle"),
-			std::vector<_event_>{ _event_{} },
-			[]()->void { std::cout << "in idle mode\n"; }
-		}
-
-	};
-
-
-	game_state_engine engine(window, states);
-
-
-
-
+	player_data< 60, 60 > player1(window, cam, level, tile_coordinate{ 20, 20 });
 	while (window.isOpen()) {
 
-		engine.check_state();
+		/*engine.check_state();*/
+
+		player1.start();
 
 		while (window.pollEvent(event)) {
 			if (event.type == sf::Event::Closed) {
