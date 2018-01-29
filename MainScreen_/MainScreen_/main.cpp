@@ -12,6 +12,8 @@
 #include <Assets\Scripts\Control\player_data.hpp>
 #include <Assets\Scripts\ADT\tile_coordinate.hpp>
 #include <Assets\Scripts\Control\camera.hpp>
+#include <Scene\scene_engine.hpp>
+#include <Assets\Scripts\ADT\scene.hpp>
 
 int main(void) {
 	sf::RenderWindow window{ sf::VideoMode{ 640, 360 }, "Wonders of Mazalt" };
@@ -33,7 +35,7 @@ int main(void) {
 
 	music_player music(
 		settings::music_player::options{
-			AUDIO + "music/opening.ogg" , 50, 1.0, true
+			AUDIO + "music/Opening.ogg" , 50, 1.0, true
 		}
 	);
 
@@ -54,19 +56,83 @@ int main(void) {
 		window, 
 		cam, 
 		level, 
+		music,
 		settings::player::options{
 			tile_coordinate{20,20},
 			std::string("main_character"),
-			std::string("oof"),
+			std::string(".png"),
+			std::string("arrow"),
 			std::string(".png")
 		}
 	
 	);
+
+
+	std::vector<_scene> scenes = {
+		_scene{ std::string(IMAGES + "Prologue/text1.png"), 8000 },
+		_scene{ std::string(IMAGES + "Prologue/scene1.png"), 4000 },
+		_scene{ std::string(IMAGES + "Prologue/text2.png"), 8000 },
+		_scene{ std::string(IMAGES + "Prologue/scene2.png"), 4000 },
+		_scene{ std::string(IMAGES + "Prologue/text3.png"), 8000 },
+		_scene{ std::string(IMAGES + "Prologue/scene3.png"), 4000 },
+		_scene{ std::string(IMAGES + "Prologue/text4.png"), 8000 },
+		_scene{ std::string(IMAGES + "Prologue/scene4.png"), 4000 },
+		_scene{ std::string(IMAGES + "Prologue/text5.png"), 8000 },
+		_scene{ std::string(IMAGES + "Prologue/scene5.png"), 4000 }
+	};
+
+	scene_engine prologue{ window, scenes };
+
+
+	std::vector<state> states = {
+		state{
+			0, 1, 
+			std::string("Play intro Music"),
+			std::vector<_event_>{ _event_{} },
+			[&music]()->void { music.play(); }
+		},
+		
+		state{
+			1, 1, 
+			std::string("Showing intro scene"),
+			std::vector<_event_>{
+				_event_{
+					2, std::string("Enter is pressed"),
+					[]()->bool { return sf::Keyboard::isKeyPressed(sf::Keyboard::Return); }
+				}
+			},
+			[&intro, &window]()->void { intro.fade(window); }
+		},
+
+		state{
+			2, 3, 
+			std::string("Showing prologue"), 
+			std::vector<_event_>{ _event_{} },
+			[&prologue,&music]()->void { music.change_track(AUDIO + "Music/Field.ogg");  prologue.start(); }
+		},
+
+		state{
+			3, 4, 
+			std::string("Showing map"), 
+			std::vector<_event_>{ _event_{} },
+			[&level, &music, &player1, &cam]()->void { cam.init(); music.change_track(AUDIO + "Music/Field.ogg"); level.draw(); player1._place(); }
+		},
+
+		state{
+			4, 4, 
+			std::string("Game state"), 
+			std::vector<_event_>{ _event_{} },
+			[&player1]()->void { player1.start();  }
+		}
+	
+	
+	};
+
+	game_state_engine engine{ states };
+
 	while (window.isOpen()) {
 
-		/*engine.check_state();*/
-
-		player1.start();
+		engine.check_state();
 
 		while (window.pollEvent(event)) {
 			if (event.type == sf::Event::Closed) {

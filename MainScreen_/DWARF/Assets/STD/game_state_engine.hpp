@@ -4,17 +4,14 @@
 #include "state.hpp"
 #include <vector>
 #include <string>
-#include <SFML/Graphics.hpp>
 
 class game_state_engine{
 private: 
-	sf::RenderWindow & window;
 	std::vector< state > & states;
 	int current = 0;
 
 public:
-	game_state_engine(sf::RenderWindow & window, std::vector< state > & states):
-		window(window),
+	game_state_engine(std::vector< state > & states):
 		states(states)
 	{}
 

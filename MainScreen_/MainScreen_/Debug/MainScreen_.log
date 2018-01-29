@@ -4,4 +4,4 @@ c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map
   c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(25): note: while compiling class template member function 'void map_tile_matrix<60,60>::init(void)'
   c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(74): note: see reference to function template instantiation 'void map_tile_matrix<60,60>::init(void)' being compiled
   c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\game_map.hpp(13): note: see reference to class template instantiation 'map_tile_matrix<60,60>' being compiled
-  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(50): note: see reference to class template instantiation 'game_map<60,60>' being compiled
+  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(52): note: see reference to class template instantiation 'game_map<60,60>' being compiled

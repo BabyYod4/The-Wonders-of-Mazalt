@@ -6,6 +6,7 @@
 #include "../ADT/settings.hpp"
 #include "game_map.hpp"
 #include "camera.hpp"
+#include "music_player.hpp"
 #include <iostream>
 #include <SFML\Graphics\Sprite.hpp>
 #include <SFML\Graphics\Texture.hpp>
@@ -18,83 +19,90 @@ private:
 	sf::RenderWindow & window;
 	camera & player_view;
 	game_map<ROW, COL> & map;
+	music_player & music;
+
 	settings::player::options settings;
 	sf::Sprite player;
 	sf::Texture player_texture;
 	sf::Sprite weapon;
 	sf::Texture weapon_texture;
-	char side;
+	char side = 'u';
+	std::string _side_ = "u";
+
+public:
+
+	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, music_player & music,settings::player::options settings ) :
+		window(window),
+		player_view(player_view),
+		map(map),
+		music(music),
+		settings(settings)
+	{
+
+		player_texture.loadFromFile(TEXTURES + settings.player_sprite_map + "/" + _side_ + settings.player_sprite_file_extention);
+		player.setTexture(player_texture);
+		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
+
+		weapon_texture.loadFromFile(TEXTURES + settings.weapon_sprite_map + "/" + _side_ + settings.weapon_sprite_file_extention);
+		weapon.setTexture(weapon_texture);
+
+		/*player_view.set_center(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid);*/
+
+		map.redraw();
+		window.draw(player);
+		window.display();
+
+	}
 
 	void _place() {
 
 		window.clear();
-		
+
+		player_texture.loadFromFile(TEXTURES + settings.player_sprite_map + "/" + _side_ + settings.player_sprite_file_extention);
+		player.setTexture(player_texture);
 		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
 		player_view.set_center(sf::Vector2f{ map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid });
-		
+
 		map.redraw();
 		window.draw(player);
 		window.display();
 		sf::sleep(sf::milliseconds(50));
-
-
-	}
-
-public:
-	
-
-
-	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, settings::player::options settings) :
-		window(window),
-		player_view(player_view),
-		map(map),
-		settings(settings)
-	{
-		player_texture.loadFromFile(TEXTURES + "green.png");
-		player.setTexture(player_texture);
-		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
-
-		weapon_texture.loadFromFile(TEXTURES + "red.png");
-		weapon.setTexture(weapon_texture);
-
-		player_view.set_center(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid);
-
-		map.redraw();
-		window.draw(player);
-		window.display();
-
 	}
 
 
 	void move_up() {
 		if (!is_collision('u', 1) ) {
 			--settings.player_pos.pos_y;
-			_place();
 			side = 'u';
+			_side_ = "u";
+			_place();
 		}
 	}
 
 	void move_down() {
 		if (!is_collision('d', 1) ) {
 			++settings.player_pos.pos_y;
-			_place();
 			side = 'd';
+			_side_ = "d";
+			_place();
 		}
 	}
 
 	void move_left() {
 		if (!is_collision('l', 1) ) {
 			--settings.player_pos.pos_x;
-			_place();
 			side = 'l';
+			_side_ = "l";
+			_place();
 		}
 	}
 	
 	void move_right() {
 		if (!is_collision('r', 1) ) {
 			++settings.player_pos.pos_x;
-			_place();
 			side = 'r';
+			_side_ = "r";
+			_place();
 		}
 	}
 
@@ -151,6 +159,8 @@ public:
 
 		sf::Vector2f & weapon_pos = map.matrix[y][x].pos;
 		weapon.setPosition(weapon_pos);
+
+
 		map.clear();
 		map.redraw();
 		window.draw(weapon);
@@ -170,7 +180,11 @@ public:
 	
 
 	void fire_weapon() {
+		weapon_texture.loadFromFile(TEXTURES + settings.weapon_sprite_map + "/" + _side_ + settings.weapon_sprite_file_extention);
+		weapon.setTexture(weapon_texture);
+
 		if ( is_target_hit(side, 10) ) {
+			music.play_sfx(AUDIO + "SFX/enemy_hit.wav");
 			std::cout << "BOOM HEADSHOT! \n";
 		}
 		std::cout << "\n";
@@ -191,6 +205,7 @@ public:
 			move_right();
 		}
 		if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Space) ) {
+			music.play_sfx(AUDIO + "SFX/shoot.wav");
 			fire_weapon();
 		}
 
