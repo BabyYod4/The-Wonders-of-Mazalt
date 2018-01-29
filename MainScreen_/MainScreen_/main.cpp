@@ -50,7 +50,18 @@ int main(void) {
 	);
 
 
-	player_data< 60, 60 > player1(window, cam, level, tile_coordinate{ 20, 20 });
+	player_data< 60, 60 > player1(
+		window, 
+		cam, 
+		level, 
+		settings::player::options{
+			tile_coordinate{20,20},
+			std::string("main_character"),
+			std::string("oof"),
+			std::string(".png")
+		}
+	
+	);
 	while (window.isOpen()) {
 
 		/*engine.check_state();*/

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <SFML/System/Vector2.hpp>
+#include <Assets\Scripts\ADT\tile_coordinate.hpp>
 
 namespace settings {
 
@@ -46,8 +47,23 @@ namespace settings {
 
 		};
 
-
 	};
+
+	namespace player {
+	
+		struct options {
+			tile_coordinate player_pos;
+			std::string player_sprite_map;
+			std::string player_sprite_prefix;
+			std::string player_sprite_file_extention;
+		/*	std::string weapon_sprite_map;
+			std::string weapon_sprite_prefix;
+			std::string weapon_sprite_file_extention;*/
+		};
+	
+	
+	};
+
 };
 
 

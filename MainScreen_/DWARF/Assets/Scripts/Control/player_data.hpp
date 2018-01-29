@@ -3,6 +3,7 @@
 
 #include "../ADT/tile_coordinate.hpp"
 #include "../ADT/tile_data.hpp"
+#include "../ADT/settings.hpp"
 #include "game_map.hpp"
 #include "camera.hpp"
 #include <iostream>
@@ -17,7 +18,7 @@ private:
 	sf::RenderWindow & window;
 	camera & player_view;
 	game_map<ROW, COL> & map;
-	tile_coordinate player_pos;
+	settings::player::options settings;
 	sf::Sprite player;
 	sf::Texture player_texture;
 	sf::Sprite weapon;
@@ -28,8 +29,8 @@ private:
 
 		window.clear();
 		
-		player.setPosition(map.matrix[player_pos.pos_y][player_pos.pos_x].pos);
-		player_view.set_center(sf::Vector2f{ map.matrix[player_pos.pos_y][player_pos.pos_x].mid });
+		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
+		player_view.set_center(sf::Vector2f{ map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid });
 		
 		map.redraw();
 		window.draw(player);
@@ -43,20 +44,20 @@ public:
 	
 
 
-	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, tile_coordinate player_pos) :
+	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, settings::player::options settings) :
 		window(window),
 		player_view(player_view),
 		map(map),
-		player_pos(player_pos)
+		settings(settings)
 	{
 		player_texture.loadFromFile(TEXTURES + "green.png");
 		player.setTexture(player_texture);
-		player.setPosition(map.matrix[player_pos.pos_y][player_pos.pos_x].pos);
+		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
 
 		weapon_texture.loadFromFile(TEXTURES + "red.png");
 		weapon.setTexture(weapon_texture);
 
-		player_view.set_center(map.matrix[player_pos.pos_y][player_pos.pos_x].mid);
+		player_view.set_center(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid);
 
 		map.redraw();
 		window.draw(player);
@@ -67,7 +68,7 @@ public:
 
 	void move_up() {
 		if (!is_collision('u', 1) ) {
-			--player_pos.pos_y;
+			--settings.player_pos.pos_y;
 			_place();
 			side = 'u';
 		}
@@ -75,7 +76,7 @@ public:
 
 	void move_down() {
 		if (!is_collision('d', 1) ) {
-			++player_pos.pos_y;
+			++settings.player_pos.pos_y;
 			_place();
 			side = 'd';
 		}
@@ -83,7 +84,7 @@ public:
 
 	void move_left() {
 		if (!is_collision('l', 1) ) {
-			--player_pos.pos_x;
+			--settings.player_pos.pos_x;
 			_place();
 			side = 'l';
 		}
@@ -91,7 +92,7 @@ public:
 	
 	void move_right() {
 		if (!is_collision('r', 1) ) {
-			++player_pos.pos_x;
+			++settings.player_pos.pos_x;
 			_place();
 			side = 'r';
 		}
@@ -101,20 +102,20 @@ public:
 		int x = 0, y = 0;
 		switch (_side) {
 			case 'l':
-				y = player_pos.pos_y;
-				x = player_pos.pos_x -range ;
+				y = settings.player_pos.pos_y;
+				x = settings.player_pos.pos_x -range ;
 				break;
 			case 'r':
-				y = player_pos.pos_y;
-				x = player_pos.pos_x + range;
+				y = settings.player_pos.pos_y;
+				x = settings.player_pos.pos_x + range;
 				break;
 			case 'u':
-				y = player_pos.pos_y -range;
-				x = player_pos.pos_x;
+				y = settings.player_pos.pos_y -range;
+				x = settings.player_pos.pos_x;
 				break;
 			case 'd':
-				y = player_pos.pos_y +range;
-				x = player_pos.pos_x;
+				y = settings.player_pos.pos_y +range;
+				x = settings.player_pos.pos_x;
 				break;
 		};
 	
@@ -131,20 +132,20 @@ public:
 		int y = 0;
 		switch (side) {
 		case 'l':
-			y = player_pos.pos_y;
-			x = player_pos.pos_x - range;
+			y = settings.player_pos.pos_y;
+			x = settings.player_pos.pos_x - range;
 			break;
 		case 'r':
-			y = player_pos.pos_y;
-			x = player_pos.pos_x + range;
+			y = settings.player_pos.pos_y;
+			x = settings.player_pos.pos_x + range;
 			break;
 		case 'u':
-			y = player_pos.pos_y - range;
-			x = player_pos.pos_x;
+			y = settings.player_pos.pos_y - range;
+			x = settings.player_pos.pos_x;
 			break;
 		case 'd':
-			y = player_pos.pos_y + range;
-			x = player_pos.pos_x;
+			y = settings.player_pos.pos_y + range;
+			x = settings.player_pos.pos_x;
 			break;
 		};
 
