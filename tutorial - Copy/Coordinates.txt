@@ -1,0 +1,11 @@
+[Oof start coordinates: x = 3, y = 5]
+[Ossas start coordinates / entrance : x = 15, y = 19]
+[Ossas walk pattern: UP, 6 x LEFT, 8 x UP, 5 x RIGHT]
+[Oof walk pattern: 5 x DOWN, 7 x RIGHT, 8 x DOWN, 5 x RIGHT, DOWN]
+
+Oof room properties:
+Camera: fixated 
+Position: [640/4, 0]
+
+Dialogue properties:
+Position: [0, 320]
