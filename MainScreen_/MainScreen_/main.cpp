@@ -14,6 +14,7 @@
 #include <Assets\Scripts\Control\camera.hpp>
 #include <Scene\scene_engine.hpp>
 #include <Assets\Scripts\ADT\scene.hpp>
+#include <Scene\tutorial.hpp>
 
 int main(void) {
 	sf::RenderWindow window{ sf::VideoMode{ 640, 360 }, "Wonders of Mazalt" };
@@ -39,6 +40,20 @@ int main(void) {
 		}
 	);
 
+
+
+	game_map<20, 20> tut_level(
+		window,
+		settings::tile_matrix::options{
+			14949,
+			std::string("tutorial_map/data.csv"),	   // data map
+			std::string("tutorial_map_data"),          // naam sprite map
+			sf::Vector2i{ 16, 16 },                // tegel grote
+			std::string("oofroom"),   // spritenaam prefix
+			std::string(".png")				       // optioneel file extention
+		}
+	);
+
 	game_map<60, 60> level(
 		window,
 		settings::tile_matrix::options{
@@ -51,6 +66,18 @@ int main(void) {
 		}
 	);
 
+	player_data< 20, 20, true > player0(
+		window,
+		cam,
+		tut_level,
+		music,
+		settings::player::options{
+			tile_coordinate{ 3,5 },
+			std::string("main_character"),
+			std::string(".png")
+		}
+
+	);
 
 	player_data< 60, 60 > player1(
 		window, 
@@ -58,7 +85,7 @@ int main(void) {
 		level, 
 		music,
 		settings::player::options{
-			tile_coordinate{20,20},
+			tile_coordinate{12,42},
 			std::string("main_character"),
 			std::string(".png"),
 			std::string("arrow"),
@@ -67,6 +94,7 @@ int main(void) {
 	
 	);
 
+	tutorial _tutorial(window, cam, player0, tut_level, player1, level);
 
 	std::vector<_scene> scenes = {
 		_scene{ std::string(IMAGES + "Prologue/text1.png"), 8000 },
@@ -113,13 +141,20 @@ int main(void) {
 
 		state{
 			3, 4, 
+			std::string("Starting Tutorial"), 
+			std::vector<_event_>{ _event_{} },
+			[&_tutorial]()->void { _tutorial.start(); }
+		},
+
+		state{
+			4, 5, 
 			std::string("Showing map"), 
 			std::vector<_event_>{ _event_{} },
 			[&level, &music, &player1, &cam]()->void { cam.init(); music.change_track(AUDIO + "Music/Field.ogg"); level.draw(); player1._place(); }
 		},
 
 		state{
-			4, 4, 
+			5, 5, 
 			std::string("Game state"), 
 			std::vector<_event_>{ _event_{} },
 			[&player1]()->void { player1.start();  }

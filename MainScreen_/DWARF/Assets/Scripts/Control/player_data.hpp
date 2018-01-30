@@ -8,12 +8,10 @@
 #include "camera.hpp"
 #include "music_player.hpp"
 #include <iostream>
-#include <SFML\Graphics\Sprite.hpp>
-#include <SFML\Graphics\Texture.hpp>
 #include <SFML/System.hpp>
 #include <SFML\Graphics.hpp>
 
-template < int ROW, int COL >
+template < int ROW, int COL, bool IS_TUT=false >
 class player_data{
 private:
 	sf::RenderWindow & window;
@@ -43,15 +41,28 @@ public:
 		player.setTexture(player_texture);
 		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
 
-		weapon_texture.loadFromFile(TEXTURES + settings.weapon_sprite_map + "/" + _side_ + settings.weapon_sprite_file_extention);
-		weapon.setTexture(weapon_texture);
-
-		/*player_view.set_center(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].mid);*/
+		if (!IS_TUT) {
+			weapon_texture.loadFromFile(TEXTURES + settings.weapon_sprite_map + "/" + _side_ + settings.weapon_sprite_file_extention);
+			weapon.setTexture(weapon_texture);
+		}
 
 		map.redraw();
 		window.draw(player);
 		window.display();
 
+	}
+
+	void _pack() {
+		window.clear();
+
+		player_texture.loadFromFile(TEXTURES + settings.player_sprite_map + "/" + _side_ + settings.player_sprite_file_extention);
+		player.setTexture(player_texture);
+		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
+
+		map.redraw();
+		window.draw(player);
+		sf::sleep(sf::milliseconds(70));
+	
 	}
 
 	void _place() {
@@ -69,6 +80,37 @@ public:
 		sf::sleep(sf::milliseconds(50));
 	}
 
+
+
+	void move_hard(const char & dir) {
+		switch (dir) {
+		case 'l':
+			--settings.player_pos.pos_x;
+			_side_ = "l";
+			_pack();
+			window.display();
+			break;
+		case 'r':
+			++settings.player_pos.pos_x;
+			_side_ = "r";
+			_pack();
+			window.display();
+			break;
+		case 'u':
+			--settings.player_pos.pos_y;
+			_side_ = "u";
+			_pack();
+			window.display();
+			break;
+		case 'd':
+			++settings.player_pos.pos_y;
+			_side_ = "d";
+			_pack();
+			window.display();
+			break;
+		};
+	
+	}
 
 	void move_up() {
 		if (!is_collision('u', 1) ) {
@@ -192,6 +234,7 @@ public:
 	}
 
 	void start() {
+
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 			move_up();
 		}
@@ -205,12 +248,45 @@ public:
 			move_right();
 		}
 		if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Space) ) {
-			music.play_sfx(AUDIO + "SFX/shoot.wav");
-			fire_weapon();
+			if (!IS_TUT) {
+				music.play_sfx(AUDIO + "SFX/shoot.wav");
+				fire_weapon();
+			}
 		}
 
 	}
 
+	char start_indicator() {
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+			move_up();
+			return 'u';
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+			move_down();
+			return 'd';
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+			move_left();
+			return 'l';
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+			move_right();
+			return 'r';
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+			if (!IS_TUT) {
+				music.play_sfx(AUDIO + "SFX/shoot.wav");
+				fire_weapon();
+				return 's';
+			}
+		}
+
+	}
+
+	tile_coordinate & get_player_pos(){
+		return settings.player_pos;
+	}
 
 };
 

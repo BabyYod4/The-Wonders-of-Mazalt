@@ -8,7 +8,7 @@
 #include <vector>
 
 template< int ROW, int COL>
-class game_map {
+class game_map{
 private:
 	map_tile_matrix<ROW, COL> map_data;
 	sf::RenderWindow & window;
