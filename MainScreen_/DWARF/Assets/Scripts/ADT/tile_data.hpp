@@ -5,6 +5,7 @@
 #include <string>
 
 struct tile_data {
+	int id = -1;
 	int level = 0;
 	sf::Vector2i size;
 	sf::Vector2f pos;

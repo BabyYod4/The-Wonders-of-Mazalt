@@ -18,7 +18,7 @@ public:
 	std::array< std::array< tile_data, COL>, ROW > matrix;
 
 	game_map(sf::RenderWindow & window, const settings::tile_matrix::options & settings) :
-		map_data(settings.data_id, settings.data_folder, settings.sprite_folder, settings.tile_size, settings.file_name_prefix, settings.file_extention),
+		map_data(settings.data_id, settings.entrance_id, settings.data_folder, settings.sprite_folder, settings.tile_size, settings.file_name_prefix, settings.file_extention),
 		matrix( map_data.get() ),
 		window(window)
 	{

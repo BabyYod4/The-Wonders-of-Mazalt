@@ -10,30 +10,36 @@
 #include <iostream>
 #include <SFML/System.hpp>
 #include <SFML\Graphics.hpp>
+#include "enemy.hpp"
 
-template < int ROW, int COL, bool IS_TUT=false >
+template < int ROW, int COL, bool CAN_SHOOT=false, bool HAS_ENEMY=false >
 class player_data{
 private:
 	sf::RenderWindow & window;
 	camera & player_view;
 	game_map<ROW, COL> & map;
 	music_player & music;
-
+	enemy & boss;
 	settings::player::options settings;
+	
 	sf::Sprite player;
 	sf::Texture player_texture;
 	sf::Sprite weapon;
 	sf::Texture weapon_texture;
+	sf::Sprite _boss;
+	sf::Texture _boss_texture;
+	
 	char side = 'u';
 	std::string _side_ = "u";
 
 public:
 
-	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, music_player & music,settings::player::options settings ) :
+	player_data(sf::RenderWindow & window , camera & player_view , game_map<ROW, COL> & map, music_player & music, enemy & boss ,settings::player::options settings ) :
 		window(window),
 		player_view(player_view),
 		map(map),
 		music(music),
+		boss(boss),
 		settings(settings)
 	{
 
@@ -41,9 +47,16 @@ public:
 		player.setTexture(player_texture);
 		player.setPosition(map.matrix[settings.player_pos.pos_y][settings.player_pos.pos_x].pos);
 
-		if (!IS_TUT) {
+		if (!CAN_SHOOT) {
 			weapon_texture.loadFromFile(TEXTURES + settings.weapon_sprite_map + "/" + _side_ + settings.weapon_sprite_file_extention);
 			weapon.setTexture(weapon_texture);
+		}
+
+		if (!HAS_ENEMY) {
+			_boss_texture.loadFromFile(TEXTURES + "green.png");
+			_boss.setTexture(_boss_texture);
+			_boss.setPosition(map.matrix[boss.pos.pos_y][boss.pos.pos_x].pos);
+			window.draw(_boss);
 		}
 
 		map.redraw();
@@ -76,6 +89,12 @@ public:
 
 		map.redraw();
 		window.draw(player);
+
+		if (!HAS_ENEMY) {
+			_boss.setPosition(map.matrix[boss.pos.pos_y][boss.pos.pos_x].pos);
+			window.draw(_boss);
+		}
+
 		window.display();
 		sf::sleep(sf::milliseconds(50));
 	}
@@ -146,6 +165,21 @@ public:
 			_side_ = "r";
 			_place();
 		}
+	}
+
+	bool is_entrace() {
+		int x = settings.player_pos.pos_x;
+		int y = settings.player_pos.pos_y;
+		const tile_data & data = map.matrix[y][x];
+		if (data.level == 2) { return true; }
+		return false;
+	}
+
+	int show_entrance_id() {
+		int x = settings.player_pos.pos_x;
+		int y = settings.player_pos.pos_y;
+		const tile_data & data = map.matrix[y][x];
+		return data.id;
 	}
 
 	bool is_collision(const char & _side, const int & level, const int & range = 1) {
@@ -235,8 +269,11 @@ public:
 
 	void start() {
 
+		if (boss.player_detected(settings.player_pos)) { std::cout << "ATTACK!!\n"; }
+
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 			move_up();
+			
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 			move_down();
@@ -248,7 +285,7 @@ public:
 			move_right();
 		}
 		if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Space) ) {
-			if (!IS_TUT) {
+			if (!CAN_SHOOT) {
 				music.play_sfx(AUDIO + "SFX/shoot.wav");
 				fire_weapon();
 			}
@@ -275,7 +312,7 @@ public:
 			return 'r';
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-			if (!IS_TUT) {
+			if (!CAN_SHOOT) {
 				music.play_sfx(AUDIO + "SFX/shoot.wav");
 				fire_weapon();
 				return 's';
@@ -286,6 +323,11 @@ public:
 
 	tile_coordinate & get_player_pos(){
 		return settings.player_pos;
+	}
+
+	void set_player_pos(const int & x, const int & y) {
+		settings.player_pos.pos_x = x;
+		settings.player_pos.pos_y = y;
 	}
 
 };

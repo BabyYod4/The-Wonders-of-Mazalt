@@ -2,6 +2,7 @@
 #define SETTINGS_HPP
 
 #include <string>
+#include <vector>
 #include <SFML/System/Vector2.hpp>
 #include <Assets\Scripts\ADT\tile_coordinate.hpp>
 
@@ -22,6 +23,7 @@ namespace settings {
 
 		struct options {
 			int data_id;
+			std::vector<int> entrance_id;
 			std::string data_folder;
 			std::string sprite_folder;
 			sf::Vector2i tile_size;

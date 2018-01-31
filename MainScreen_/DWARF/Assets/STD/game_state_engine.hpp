@@ -15,7 +15,6 @@ public:
 		states(states)
 	{}
 
-	
 	void check_state() {
 		state & data = states[current];
 

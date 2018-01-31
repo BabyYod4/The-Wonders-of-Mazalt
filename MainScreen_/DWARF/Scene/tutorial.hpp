@@ -47,7 +47,7 @@ public:
 
 	void calculate_sub_pos() {
 		tile_coordinate & pos = oof_outside.get_player_pos();
-		sprite_subs.setPosition(sf::Vector2f{ 0, ((float)pos.pos_y - 10) * 16 });
+		sprite_subs.setPosition(sf::Vector2f{ ((float)pos.pos_x - 13) * 16, ((float)pos.pos_y - 10) * 16 });
 	}
 
 	void show_sub_title(char * path, bool inside = true) {
