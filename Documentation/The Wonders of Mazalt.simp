@@ -1,0 +1,1342 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="11.45" multi-file="no" uid="simp2d5413c343b546cb9bf6be0c4a83c8d3">
+  <meta>
+    <name>The Wonders of Mazalt</name>
+    <authors>Diego Nijboer, Arsalan Anwari</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>13</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>645</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>14</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="UniversalConnector" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type type-id="dependency" type="UmlDependency" />
+        <value>15</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="UmlAssociation" />
+        <value>24</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment" type="UmlComment" />
+        <value>2</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>159</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>164</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-b037931d99bb4b1cb39d6c6dcdf39d8e" name="" task-id-sequence="0">
+    <persons>
+      <person id="Pe451957681744cd686244d05eaae5d5a">
+        <first-name>Arsalan</first-name>
+        <last-name>Anwari</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-5b83372805014650ba9c63f327b8d047" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="std::string" tid="" name="std::string" description="" />
+      <type id="int" tid="" name="int" description="" />
+      <type id="sf::Vector2i" tid="" name="sf::Vector2i" description="" />
+      <type id="sf::Vector2f" tid="" name="sf::Vector2f" description="" />
+      <type id="std::vector&lt;int&gt;" tid="" name="std::vector&lt;int&gt;" description="" />
+      <type id="Class:di962840401696801528" tid="" name="tile_coordinate" description="" class-ref="di962840401696801528" />
+      <type id="&amp;sf::RenderWindow" tid="" name="&amp;sf::RenderWindow" description="" />
+      <type id="&amp;sf::Vector2f" tid="" name="&amp;sf::Vector2f" description="" />
+      <type id="sf::View" tid="" name="sf::View" description="" />
+      <type id="void" tid="" name="void" description="" />
+      <type id="&amp;sf::Vector2i" tid="" name="&amp;sf::Vector2i" description="" />
+      <type id="&amp;int" tid="" name="&amp;int" description="" />
+      <type id="&amp; tile_coordinate" tid="" name="&amp; tile_coordinate" description="" />
+      <type id="bool" tid="" name="bool" description="" />
+      <type id="map_tile_matrix&lt;ROW, COL&gt;" tid="" name="map_tile_matrix&lt;ROW, COL&gt;" description="" />
+      <type id="sf::Sprite" tid="" name="sf::Sprite" description="" />
+      <type id="sf::Texture" tid="" name="sf::Texture" description="" />
+      <type id="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" tid="" name="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" description="" />
+      <type id="sf::Music" tid="" name="sf::Music" description="" />
+      <type id="sf::Sound" tid="" name="sf::Sound" description="" />
+      <type id="sf::Buffer" tid="" name="sf::Buffer" description="" />
+      <type id="&amp;settings::music_player::options" tid="" name="&amp;settings::music_player::options" description="" />
+      <type id="&amp; std::string" tid="" name="&amp; std::string" description="" />
+      <type id="&amp;camera" tid="" name="&amp;camera" description="" />
+      <type id="&amp;game_map&lt;ROW,COL&gt;" tid="" name="&amp;game_map&lt;ROW,COL&gt;" description="" />
+      <type id="&amp;music_player" tid="" name="&amp;music_player" description="" />
+      <type id="&amp;enemy" tid="" name="&amp;enemy" description="" />
+      <type id="settings::player::options" tid="" name="settings::player::options" description="" />
+      <type id="&amp;char" tid="" name="&amp;char" description="" />
+      <type id="&amp; int" tid="" name="&amp; int" description="" />
+      <type id="char" tid="" name="char" description="" />
+      <type id="&amp;tile_coordinate" tid="" name="&amp;tile_coordinate" description="" />
+      <type id="&amp;std::vector&lt;int&gt;" tid="" name="&amp;std::vector&lt;int&gt;" description="" />
+      <type id="&amp;std::string" tid="" name="&amp;std::string" description="" />
+      <type id="&amp;std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" tid="" name="&amp;std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" description="" />
+      <type id="std::function&lt;bool()&gt;" tid="" name="std::function&lt;bool()&gt;" description="" />
+      <type id="std::function&lt; void() &gt;" tid="" name="std::function&lt; void() &gt;" description="" />
+      <type id="std::vector&lt; _event_ &gt;" tid="" name="std::vector&lt; _event_ &gt;" description="" />
+      <type id="&amp;std::vector &lt;state&gt;" tid="" name="&amp;std::vector &lt;state&gt;" description="" />
+      <type id="&amp;std::vector&lt;_scene&gt;" tid="" name="&amp;std::vector&lt;_scene&gt;" description="" />
+      <type id="&amp;game_map&lt;20,20&gt;" tid="" name="&amp;game_map&lt;20,20&gt;" description="" />
+      <type id="&amp;player_data&lt;20,20&gt;" tid="" name="&amp;player_data&lt;20,20&gt;" description="" />
+      <type id="&amp;player_data&lt;60,60,true, false&gt;" tid="" name="&amp;player_data&lt;60,60,true, false&gt;" description="" />
+      <type id="&amp;game_map&lt;60,60&gt;" tid="" name="&amp;game_map&lt;60,60&gt;" description="" />
+      <type id="*char" tid="" name="*char" description="" />
+      <type id="&amp;std::vector&lt;char&gt;" tid="" name="&amp;std::vector&lt;char&gt;" description="" />
+    </custom-types>
+  </types>
+  <items />
+  <models>
+    <model id="pc474572de890424bb6fa6b44c6967196_205211118" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author>Arsalan Anwari</author>
+        </authors>
+        <description />
+        <creation-date>02/01/2018 13:38:48</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="pe318a2745a2447968977f0fc20e8c374_651233150" name="ClassDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-160,-18" zoom="0.4">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author>Arsalan Anwari</author>
+          </authors>
+          <description />
+          <creation-date>02/01/2018 13:38:48</creation-date>
+          <change-date>02/01/2018 17:33:13</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di311368503328895588" cid="C001" type="class" name="_scene" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a2b20c2d2cf4a4cec8be32c0ec4dce5c0753" cid="ELEM001" name="scene_image_name" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a771241e2e6924696b6898d61138b40f4667" cid="ELEM002" name="delay_ms" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di674931362338818679" cid="C001" type="class" name="tile_data" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="af1a59863237340948c86a8e97a7aadaf731" cid="ELEM003" name="id" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="-1: int">
+                <style class="default" />
+              </attribute>
+              <attribute id="a27cdd44a2e264f4497cfb3521faa9442526" cid="ELEM004" name="level" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="0: int">
+                <style class="default" />
+              </attribute>
+              <attribute id="a41556ee23dc748dea97eaba52b1d9a97504" cid="ELEM005" name="size" creation-date="01/01/0001 00:00:00" type="sf::Vector2i" type-id="sf::Vector2i" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a0ec84844afcd459e9accf66bb3969f58815" cid="ELEM006" name="pos" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a99b21e0e9adc4029acbd9e5b308fca61553" cid="ELEM007" name="mid" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1983dfec505847b2835beb778a8cf363313" cid="ELEM008" name="texture" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di962840401696801528" cid="C001" type="class" name="tile_coordinate" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a31138b4d37004698a6f042ed38e699af418" cid="ELEM010" name="pos_x" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="0: int">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2da31a015fa84600881558a0670d91cd504" cid="ELEM011" name="pos_y" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="0: int">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di101568317418211952" cid="C002" type="class" name="settings" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:52:56">
+            <stereotypes>
+              <stereotype name="namespace" />
+            </stereotypes>
+            <style class="default" />
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di189104715183803621" cid="C001" type="class" name="music_player::options" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a31138b4d37004698a6f042ed38e699af418" cid="ELEM010" name="song" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="undefined">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2da31a015fa84600881558a0670d91cd504" cid="ELEM011" name="volume" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="100: float">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6d17746a4ed04c7a96c384cccdeb9dbb313" cid="ELEM012" name="pitch" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="1.0: float">
+                <style class="default" />
+              </attribute>
+              <attribute id="a996197b1a6b24973a2c80c9785a99176278" cid="ELEM013" name="loop" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="true: bool">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di945764800844796323" cid="C001" type="class" name="tile_matrix::options" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a31138b4d37004698a6f042ed38e699af418" cid="ELEM010" name="data_id" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="undefined">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2da31a015fa84600881558a0670d91cd504" cid="ELEM011" name="entrance_id" creation-date="01/01/0001 00:00:00" type="std::vector&lt;int&gt;" type-id="std::vector&lt;int&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6d17746a4ed04c7a96c384cccdeb9dbb313" cid="ELEM012" name="data_folder" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a996197b1a6b24973a2c80c9785a99176278" cid="ELEM013" name="sprite_folder" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5482803034fe4095b7184e18243c7788382" cid="ELEM014" name="tile_size" creation-date="01/01/0001 00:00:00" type="sf::Vector2i" type-id="sf::Vector2i" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7c387ea0af41457aabb77bb4e6a70148215" cid="ELEM015" name="file_name_prefix" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="afe6084d5b8c04a039cfe0294e42a7a0a981" cid="ELEM016" name="file_extention" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di626846253361044231" cid="C001" type="class" name="animations::text_fade::options" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a31138b4d37004698a6f042ed38e699af418" cid="ELEM010" name="alpha_value" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="undefined">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2da31a015fa84600881558a0670d91cd504" cid="ELEM011" name="background_path" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6d17746a4ed04c7a96c384cccdeb9dbb313" cid="ELEM012" name="text_path" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a996197b1a6b24973a2c80c9785a99176278" cid="ELEM013" name="background_pos" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ada31b577b45f49309f4280ea47cec4eb549" cid="ELEM021" name="text_pos" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="abe0fa19d299844a4bf20d648230030a3425" cid="ELEM022" name="background_scale" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa6027cb15b9c4052bda58f6a683026b8222" cid="ELEM023" name="text_scale" creation-date="01/01/0001 00:00:00" type="sf::Vector2f" type-id="sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di629170353277698333" cid="C001" type="class" name="player::options" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 13:44:59">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a31138b4d37004698a6f042ed38e699af418" cid="ELEM010" name="player_pos" creation-date="01/01/0001 00:00:00" type="tile_coordinate" type-id="Class:di962840401696801528" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2da31a015fa84600881558a0670d91cd504" cid="ELEM011" name="player_sprite_map" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6d17746a4ed04c7a96c384cccdeb9dbb313" cid="ELEM012" name="player_sprite_file_extention" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a996197b1a6b24973a2c80c9785a99176278" cid="ELEM013" name="weapon_sprite_map" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ada31b577b45f49309f4280ea47cec4eb549" cid="ELEM021" name="weapon_sprite_file_extention" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di201416191395542443" cid="C003" type="class" name="camera" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 14:20:31">
+            <stereotypes>
+              <stereotype name="control" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="af2e288738fb34bfd885d90794569600a342" cid="ELEM028" name="window" creation-date="01/01/0001 00:00:00" type="&amp;sf::RenderWindow" type-id="&amp;sf::RenderWindow" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="afc8316b89fa14cd891d29e24bbd9e786568" cid="ELEM029" name="pos" creation-date="01/01/0001 00:00:00" type="&amp;sf::Vector2f" type-id="&amp;sf::Vector2f" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="af87572d654be47a5a2005942b09cfa96271" cid="ELEM030" name="viewport" creation-date="01/01/0001 00:00:00" type="sf::View" type-id="sf::View" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3da8e21747dc46039acb4143e9d10edb87" cid="ELEM032" name="size" creation-date="01/01/0001 00:00:00" type="&amp;sf::Vector2f" type-id="&amp;sf::Vector2f" visibility="public">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oc55b88927a574eb984e0cac1e49e4982902" cid="ELEM033" name="init" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o22942352422c4368b04189a889fa868a58" cid="ELEM034" name="set_center" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0dca5bf510cf40218b3a71488bdba36d" name="new_center" type="sf::Vector2f" type-id="sf::Vector2f" />
+                </parameters>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di400814183803792073" cid="C004" type="class" name="enemy" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 14:24:30">
+            <stereotypes>
+              <stereotype name="control" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a7694cfa1d475414aaf33717678da611c66" cid="ELEM036" name="pos" creation-date="01/01/0001 00:00:00" type="tile_coordinate" type-id="Class:di962840401696801528" visibility="public">
+                <style class="default" />
+              </attribute>
+              <attribute id="a0e43fa306a8f4b53b1a8c7e53d181f60270" cid="ELEM037" name="health" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </attribute>
+              <attribute id="a0fa36ed16feb433d80bf43fd3c1d0d13848" cid="ELEM038" name="sight_range" creation-date="01/01/0001 00:00:00" type="&amp;sf::Vector2i" type-id="&amp;sf::Vector2i" visibility="public">
+                <style class="default" />
+              </attribute>
+              <attribute id="afed9e7bb6c57481ea317caf981a0e81f130" cid="ELEM039" name="begin" creation-date="01/01/0001 00:00:00" type="sf::Vector2i" type-id="sf::Vector2i" visibility="public">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4843731955ae4ef8926bfda526c1b28b677" cid="ELEM040" name="end" creation-date="01/01/0001 00:00:00" type="sf::Vector2i" type-id="sf::Vector2i" visibility="public">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o340bea0cf58f48e6a5a02149a5bd8aec155" cid="ELEM041" name="_calc" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="od6adce4555934608bf853c486426bb75873" cid="ELEM042" name="set_pos" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pcbdb27c8686d452ca9978bf5586a5410" name="x" type="&amp;int" type-id="&amp;int" />
+                  <parameter id="pb733a3cc878443a9b986c375412b53d3" name="y" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="of609d1f33f8446468f439c83717d8058548" cid="ELEM043" name="player_detected" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p531d836fe783404688dd9502aa495cb2" name="player_pos" type="&amp; tile_coordinate" type-id="&amp; tile_coordinate" />
+                </parameters>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di801210789284053052" cid="C005" type="class" name="game_map &lt;ROW: int, COL: int&gt;" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 14:29:32">
+            <stereotypes>
+              <stereotype name="control" />
+              <stereotype name="template" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="ae162d8f37a95460086ed5a4059b1d91998" cid="ELEM044" name="map_data" creation-date="01/01/0001 00:00:00" type="map_tile_matrix&lt;ROW, COL&gt;" type-id="map_tile_matrix&lt;ROW, COL&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad439082d05e94564a5d33b0e5a099786660" cid="ELEM045" name="window" creation-date="01/01/0001 00:00:00" type="&amp;sf::RenderWindow" type-id="&amp;sf::RenderWindow" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3302128129b14108b30c8006efc46690520" cid="ELEM046" name="map" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a51b32f3dbbe046b394cc667ecfdb584d285" cid="ELEM047" name="texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4c576416fa7c4cce8a899c16ca6aa78650" cid="ELEM048" name="matrix" creation-date="01/01/0001 00:00:00" type="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" type-id="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" visibility="public">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o51b99e1ccb3a48409d4267d6f60bfcb2940" cid="ELEM049" name="get" creation-date="01/01/0001 00:00:00" type="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" type-id="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o9ccc1cad6a474f0f810b15b136f9d1c1113" cid="ELEM050" name="redraw" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o500c7bc271824dcba3a4d58984c805d0645" cid="ELEM051" name="draw" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ofc8ad4cbff1b4a73a5a820eab29b9dfa692" cid="ELEM052" name="clear" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o697957d18ed145feb9da998ae09226a6537" cid="ELEM053" name="display" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di400803279104660323" cid="C006" type="class" name="music_player" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 14:34:43">
+            <stereotypes>
+              <stereotype name="control" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a1ac8c115a81446e1bb9e9a84daa9cd2d657" cid="ELEM054" name="music" creation-date="01/01/0001 00:00:00" type="sf::Music" type-id="sf::Music" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a0d97affcda504ce6ae9d6ed8d2e1a237250" cid="ELEM055" name="sfx" creation-date="01/01/0001 00:00:00" type="sf::Sound" type-id="sf::Sound" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a77abb14fcf69488e8445fd7e228d2cdc391" cid="ELEM056" name="buffer" creation-date="01/01/0001 00:00:00" type="sf::Buffer" type-id="sf::Buffer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a969ddca988164bd5a18af87a63ce631a94" cid="ELEM057" name="settings" creation-date="01/01/0001 00:00:00" type="&amp;settings::music_player::options" type-id="&amp;settings::music_player::options" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1d06789faf3945ce82ac6fd8b421695994" cid="ELEM058" name="active" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="false: bool">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o58ed5cb69101491db1d75244ea7761c5419" cid="ELEM059" name="init" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o5f4e60d49dfc4421bcbf5b5e4f50ff9e794" cid="ELEM060" name="play" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o03fa34c08ea340af8047f378525a76b9936" cid="ELEM061" name="resume" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o940deefcb019425b84628a732c4a713c201" cid="ELEM062" name="pause" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="odd343b277ea14309945cc84bcb79ca87483" cid="ELEM063" name="stop" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o464418dda2ab49e98900acf7c82e885a764" cid="ELEM064" name="change_track" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p00b56dedb8cc476d8cdf1b143eecd704" name="new_track_path" type="&amp; std::string" type-id="&amp; std::string" />
+                </parameters>
+              </operation>
+              <operation id="o2dc4a6278b644242abb55ee35e3af07661" cid="ELEM065" name="play_sfx" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p2d34ed51a7624333b828ba1013408839" name="new_track_path" type="std::string" type-id="std::string" />
+                </parameters>
+              </operation>
+              <operation id="oa0cd9765ccc640848ce44044110edfc1342" cid="ELEM066" name="getStatus" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di552018762748348876" cid="C007" type="class" name="player_data &lt;ROW: int, COL: int, CAN_SHOOT=false: bool, HAS_ENEMY=false: bool&gt;" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 14:38:37">
+            <stereotypes>
+              <stereotype name="control" />
+              <stereotype name="template" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="aa1fd30c974194da58ebac9a0f2e64833929" cid="ELEM068" name="window" creation-date="01/01/0001 00:00:00" type="&amp;sf::RenderWindow" type-id="&amp;sf::RenderWindow" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab1b156ad79774b56b10e25950275533e896" cid="ELEM069" name="player_view" creation-date="01/01/0001 00:00:00" type="&amp;camera" type-id="&amp;camera" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a45c23071399945aebe3881792ed392ff280" cid="ELEM070" name="map" creation-date="01/01/0001 00:00:00" type="&amp;game_map&lt;ROW,COL&gt;" type-id="&amp;game_map&lt;ROW,COL&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a77083ed6a90b4d3b8f8492a9ce0c878a2" cid="ELEM071" name="music" creation-date="01/01/0001 00:00:00" type="&amp;music_player" type-id="&amp;music_player" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1946038df3f94a779289cdd519bf904464" cid="ELEM072" name="boss" creation-date="01/01/0001 00:00:00" type="&amp;enemy" type-id="&amp;enemy" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a54a90b448bd047268a2d07626b8c4c24893" cid="ELEM073" name="settings" creation-date="01/01/0001 00:00:00" type="settings::player::options" type-id="settings::player::options" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9ac409ae44824a3ca39308e19596388d502" cid="ELEM074" name="player" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac036091149e5485389dfeac4e4cbbac1940" cid="ELEM075" name="player_texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac51c55af6c5744ea92e329befc059f10377" cid="ELEM076" name="weapon" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a545b142fecce4ecb9893220711140ee5768" cid="ELEM077" name="weapon_texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2c03dcc77a26432ab3101370bc75fb80143" cid="ELEM078" name="_boss" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa19ffdf61c5941cf83db849972b9aaa9534" cid="ELEM079" name="_boss_texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4769f10738a24dbdb0e8d1e9e6e43e06909" cid="ELEM080" name="boss_weapon" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2f85ea0c959b447ba06a0b0cb68179eb724" cid="ELEM081" name="boss_weapon_texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae034ac96a55b4fed8da113e645b5dfce983" cid="ELEM082" name="side" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="'u': char">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6b24ba28f8994b8587e5932895cdf48a842" cid="ELEM083" name="_side_" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="&quot;u&quot;: std::string">
+                <style class="default" />
+              </attribute>
+              <attribute id="aac6c421f0a914b32b4f30cb3e9395414452" cid="ELEM084" name="enemy_spotted" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="false: bool">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab05c2a3d63ec423ca2f00e400747172b592" cid="ELEM085" name="enemy_alive" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="true: bool">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae2910c5d3f704e4894277c3c0e5599af686" cid="ELEM086" name="boss_move_counter" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="10: int">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o25c7bcf92b744e73bad671810a2e2248795" cid="ELEM091" name="_pack" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o79b07256d271433794ac72399f4036d6480" cid="ELEM092" name="_place" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o135e2a9eeee7452595e3f6b1b29fd9d878" cid="ELEM093" name="move_hard" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pe34ec08665a24173b424bec39450fe5c" name="dir" type="&amp;char" type-id="&amp;char" />
+                </parameters>
+              </operation>
+              <operation id="o1ec88e77aaad4e15a0a9b7a53aaf1984560" cid="ELEM094" name="move_up" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o848433f9c9bb4ed285ec043e0f1e627523" cid="ELEM095" name="move_down" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o5e0cf872913a441f94b9015021315aac485" cid="ELEM096" name="move_left" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o05aebc9ba1a9432a8b1ef574eb472807885" cid="ELEM097" name="move_right" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o50cb598c678d453b9d895fe2a0752cab285" cid="ELEM098" name="is_entrance" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o08cab4d10c9a466c97a5162563e5dbe4700" cid="ELEM099" name="show_entrance_id" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o98a07da31333409e81a470ba6c30432b85" cid="ELEM100" name="is_collision" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p63da819f246f41bda2ed2faf4b1736d0" name="_side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pa08441efcc364b1f8107123d18151739" name="level" type="&amp; int" type-id="&amp; int" />
+                  <parameter id="pdb7bcd67867840a9a9d694f1fdd49683" name="range" type="" type-id="" default-value="1: &amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o6f70705818c74a6c97e0cc462ba320db501" cid="ELEM101" name="is_collision2" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pba853a03d28b437a88e2ae231215e866" name="_side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="p3e44d99adab3495bacc3f110e88e7d0a" name="level" type="&amp; int" type-id="&amp; int" />
+                  <parameter id="p98adfb132cd041818faced71bafa612b" name="range" type="" type-id="" default-value="1: &amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o173675f67ac94ce2b3c20f9f118ef2d2885" cid="ELEM102" name="enemy_is_hit" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p894e7f41592a42959c922f98916d2a57" name="_side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pd56f47a7f7c14e3d98d3467e55738cc0" name="range" type="" type-id="" default-value="1: &amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o128aa2dbc72f44f6aa452580b1608f05275" cid="ELEM103" name="player_is_hit" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p91a59aceccc64a25a334460fb6441fb6" name="_side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pc0e332e0abb040e3a5f2af68adbc0cf5" name="range" type="" type-id="" default-value="1: &amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o8338cdd388194d34953eae6f4b8b35d0675" cid="ELEM104" name="draw_weapon" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p4d76344ebf5a4b0695bc3c0765c81196" name="range" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o30e3e8ee73ba4732abf94fc8f1e010fe90" cid="ELEM105" name="draw_enemy_weapon" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pa1fed383d1664cbe94ba5aa810c49602" name="_side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pa289e4da0e4542119e542b11e13205a8" name="range" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o22b4cb6c93f84a08bffd11dcb8ab254e199" cid="ELEM106" name="attack_player" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o864e020bb76e4d99b1b688a4d1b77a0766" cid="ELEM107" name="is_target_hit" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pe32488ddb57e4bbb88036ff71ad25b4e" name="side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pc04f25d437ca44a9b88a23a100c82b73" name="range" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o09869fb0bec047aeae563000a391efa5898" cid="ELEM108" name="is_player_hit" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p5c984f298b5f403f8ca3f325b89ed877" name="side" type="&amp;char" type-id="&amp;char" />
+                  <parameter id="pdd29f89607c34d75a1349a554b3b8b6a" name="range" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="oecb7db848f954670b4e433970c1ac5cf603" cid="ELEM109" name="fire_weapon" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o47fd1e4c03a547b0a12bf9226fc7ac8d891" cid="ELEM110" name="rand_range" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p827d0b3130694795a62b97c4bb6d7a32" name="min" type="&amp;int" type-id="&amp;int" />
+                  <parameter id="pf9998f3c329d40349f7afa27b486e45f" name="max" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="ofc02709fcf2e45aea46f182a305b65e9746" cid="ELEM111" name="check_fire_side" creation-date="01/01/0001 00:00:00" type="char" type-id="char" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd8960a3b919b4b51beb9d7eebfa2e7ce" name="pos_x" type="&amp;int" type-id="&amp;int" />
+                  <parameter id="p85f0229222b445678aa8075d1649f2c2" name="pos_y" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o6ecbf7a720334db8b51310c945adc014233" cid="ELEM112" name="start" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o93105537bca44baf93b73738f1124618540" cid="ELEM113" name="start_indicator" creation-date="01/01/0001 00:00:00" type="char" type-id="char" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o1c3c98ed802f4af8ba068294b463f73f941" cid="ELEM114" name="get_player_pos" creation-date="01/01/0001 00:00:00" type="&amp;tile_coordinate" type-id="&amp;tile_coordinate" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o79fc1046e23e4ca48333ef71d7a56e8b219" cid="ELEM115" name="set_player_pos" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p7aba41d83dfd4870ac58da0373b546a3" name="x" type="&amp;int" type-id="&amp;int" />
+                  <parameter id="p35b6cd825ac847df9bc9da52e40c722a" name="y" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="obb6854c177ad4daaa4156b3872a3509d901" cid="ELEM116" name="end_game" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pac6da12771b748018386df12dc4aae15" name="fle_path" type="std::string" type-id="std::string" />
+                </parameters>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di286053100666151377" cid="C008" type="class" name="map_tile_matrix&lt; ROW: int, COL: int &gt;" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:40:39">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="ab42bd53298504f439d57992df45509a9717" cid="ELEM117" name="matrix" creation-date="01/01/0001 00:00:00" type="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" type-id="std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a546cbcc134cf4be6ab4716f5ddb9f033892" cid="ELEM118" name="data_id" creation-date="01/01/0001 00:00:00" type="&amp;int" type-id="&amp;int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a830b24873da34682b339fde22f24d724863" cid="ELEM119" name="entrance_id" creation-date="01/01/0001 00:00:00" type="&amp;std::vector&lt;int&gt;" type-id="&amp;std::vector&lt;int&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a86f673265c074d70a37fad79d1ff94cf534" cid="ELEM120" name="dir_path_data" creation-date="01/01/0001 00:00:00" type="&amp; std::string" type-id="&amp; std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1acad61f3384494f9db7a8af0d24a208175" cid="ELEM121" name="dir_name_textures" creation-date="01/01/0001 00:00:00" type="&amp; std::string" type-id="&amp; std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a29ed7d340d8d4e5483e21be798940116651" cid="ELEM122" name="tile_size" creation-date="01/01/0001 00:00:00" type="sf::Vector2i" type-id="sf::Vector2i" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6a6168eb5fe240398971f6ee4c878796787" cid="ELEM123" name="file_name_prefix" creation-date="01/01/0001 00:00:00" type="&amp; std::string" type-id="&amp; std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab7cc1fa69ed242c1ada3fa3d3cc62567264" cid="ELEM124" name="file_extention" creation-date="01/01/0001 00:00:00" type="&amp;std::string" type-id="&amp;std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o4226ccaee18f4aeeba57c635631c8646256" cid="ELEM127" name="is_entrace" creation-date="01/01/0001 00:00:00" type="bool" type-id="bool" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pf324c2e069914b89a290f162616cb134" name="id" type="&amp;int" type-id="&amp;int" />
+                </parameters>
+              </operation>
+              <operation id="o81c2f3fec1f7449dadcc7f1f861c1c83791" cid="ELEM128" name="init" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="o125e8f1a44e845a68531907625065040277" cid="ELEM129" name="get" creation-date="01/01/0001 00:00:00" type="&amp;std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" type-id="&amp;std::array&lt; std::array&lt; tile_data, COL&gt;, ROW &gt;" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di472066324751268661" cid="C009" type="class" name="_event_" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:50:12">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="ae3c845df83d34628bb3d1a2bf6eb4d84147" cid="ELEM135" name="next_state" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5a79a269f897486a841078934cc57ec4545" cid="ELEM136" name="name" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae63f96e4807a402a89d4d0102614061a935" cid="ELEM137" name="condition" creation-date="01/01/0001 00:00:00" type="std::function&lt;bool()&gt;" type-id="std::function&lt;bool()&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac2fff7bf487c4306aa12d2872bd8c308285" cid="ELEM138" name="action" creation-date="01/01/0001 00:00:00" type="std::function&lt; void() &gt;" type-id="std::function&lt; void() &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di854239372260616361" cid="C009" type="class" name="state" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:50:12">
+            <stereotypes>
+              <stereotype name="struct" />
+              <stereotype name="Abstract Data Type" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="ae3c845df83d34628bb3d1a2bf6eb4d84147" cid="ELEM135" name="id" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5a79a269f897486a841078934cc57ec4545" cid="ELEM136" name="next_state" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae63f96e4807a402a89d4d0102614061a935" cid="ELEM137" name="state_name" creation-date="01/01/0001 00:00:00" type="std::string" type-id="std::string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac2fff7bf487c4306aa12d2872bd8c308285" cid="ELEM138" name="events" creation-date="01/01/0001 00:00:00" type="std::vector&lt; _event_ &gt;" type-id="std::vector&lt; _event_ &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a53723122f5fa4d4c9d549a766dfcdd77657" cid="ELEM139" name="task" creation-date="01/01/0001 00:00:00" type="std::function&lt; void() &gt;" type-id="std::function&lt; void() &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di383707912992018222" cid="C010" type="class" name="game_state_engine" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:53:59">
+            <stereotypes>
+              <stereotype name="control" />
+              <stereotype name="state machine engine" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a0084df6da9a8462884d3dbf7775b275f555" cid="ELEM140" name="states" creation-date="01/01/0001 00:00:00" type="&amp;std::vector &lt;state&gt;" type-id="&amp;std::vector &lt;state&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="af538e9607a4b4b3286bb146fec060d5e33" cid="ELEM141" name="current" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private" default-value="0: int">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o59da3aac471f41adb9e338a607e433c911" cid="ELEM142" name="check_state" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di641489113153658457" cid="C011" type="class" name="scene_engine" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:56:05">
+            <stereotypes>
+              <stereotype name="control" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="aceffeaab0e8047ad809a79211cea1fb6686" cid="ELEM143" name="window" creation-date="01/01/0001 00:00:00" type="&amp;sf::RenderWindow" type-id="&amp;sf::RenderWindow" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9f90ad3831cd4828aab26ae91be7c3dc144" cid="ELEM144" name="scenes" creation-date="01/01/0001 00:00:00" type="&amp;std::vector&lt;_scene&gt;" type-id="&amp;std::vector&lt;_scene&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="af9239f43090c443aaa5e36e048ca5e9b593" cid="ELEM145" name="texture" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="add89ec51adfa43e7b0988e92cc5f6c3e124" cid="ELEM146" name="scene" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o57be1d293a7e4e77bdadf9709242a61759" cid="ELEM148" name="start" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di970874752202207110" cid="C013" type="class" name="tutorial" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 16:58:08">
+            <stereotypes>
+              <stereotype name="boundary" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a7e9f93b555b246ccb9188e1c21b26060293" cid="ELEM149" name="window" creation-date="01/01/0001 00:00:00" type="&amp;sf::RenderWindow" type-id="&amp;sf::RenderWindow" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="abb0420c843814ae0bd5623890b85010c478" cid="ELEM150" name="cam" creation-date="01/01/0001 00:00:00" type="&amp;camera" type-id="&amp;camera" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="af12110fa66164176b1d0b21782a7ce95644" cid="ELEM151" name="oof_inside" creation-date="01/01/0001 00:00:00" type="&amp;player_data&lt;20,20&gt;" type-id="&amp;player_data&lt;20,20&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a138d7f6e715b41e9903bc1b68069d57c808" cid="ELEM152" name="tut_map" creation-date="01/01/0001 00:00:00" type="&amp;game_map&lt;20,20&gt;" type-id="&amp;game_map&lt;20,20&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aaf40bdd63fcb4fe19f80d29295a3ff60971" cid="ELEM153" name="oof_outside" creation-date="01/01/0001 00:00:00" type="&amp;player_data&lt;60,60,true, false&gt;" type-id="&amp;player_data&lt;60,60,true, false&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a721b4d2f708447cd9e1dba0305fbd874141" cid="ELEM154" name="map" creation-date="01/01/0001 00:00:00" type="&amp;game_map&lt;60,60&gt;" type-id="&amp;game_map&lt;60,60&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3f8353b76fc647f69fa80f0f734fe76f305" cid="ELEM155" name="texture_subs" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a62585cdc6f7e450cbc202bd9bfa556e9745" cid="ELEM156" name="sprite_subs" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac407d00bac714d12a167038eeb6fb65a911" cid="ELEM157" name="texture_ossas" creation-date="01/01/0001 00:00:00" type="sf::Texture" type-id="sf::Texture" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a11c45368977e49d18812c06dc8526a90102" cid="ELEM158" name="sprite_ossas" creation-date="01/01/0001 00:00:00" type="sf::Sprite" type-id="sf::Sprite" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o1e3aed784bfb40c09baa679334cbe970354" cid="ELEM159" name="calculate_sub_pos" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o2cfc06a5935f477ca18353f4ba306aa4779" cid="ELEM160" name="show_sub_title" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p56ad9fa39629410ba3e9090f73ea0f77" name="path" type="*char" type-id="*char" />
+                  <parameter id="p03821509d41b4d4cb4abbcf3b04fe5bb" name="inside" type="" type-id="" default-value="true: bool" />
+                </parameters>
+              </operation>
+              <operation id="obc9a1a7d500d4c6ab7be2fa575c310a2352" cid="ELEM161" name="show_instruction" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p5a54d7218bca4a4a847c7edbf42a1ab5" name="path" type="*char" type-id="*char" />
+                </parameters>
+              </operation>
+              <operation id="oc1981361d12b4f949c0a035b8e914f1b730" cid="ELEM162" name="walk_pattern" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p6d01fc2be41443fc84f8059dff995b7e" name="pattern" type="&amp;std::vector&lt;char&gt;" type-id="&amp;std::vector&lt;char&gt;" />
+                  <parameter id="p994583967d264f31b636b921ee7ccdd9" name="inside" type="" type-id="" default-value="true: bool" />
+                </parameters>
+              </operation>
+              <operation id="od541f2006d404f16b827dee1b242d5dc458" cid="ELEM163" name="start" creation-date="01/01/0001 00:00:00" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di975533752448161475" cid="DEP001" type="dependency" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:13:05" from="di189104715183803621" to="di101568317418211952">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di269080351500498676" cid="DEP002" type="dependency" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:13:17" from="di945764800844796323" to="di101568317418211952">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di110075901626269332" cid="DEP004" type="dependency" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:13:21" from="di626846253361044231" to="di101568317418211952">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di939549069796340555" cid="DEP006" type="dependency" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:13:29" from="di629170353277698333" to="di101568317418211952">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di538384548972137202" cid="REL020" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:29:06" from="di641489113153658457" to="di311368503328895588">
+            <style class="default" />
+            <relation from="di641489113153658457" to="di311368503328895588">
+              <start-role id="umlar-1d9b74ef-d417-4805-893d-60ca86644d1c" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="umlar-d56efe26-b5a0-4e1d-bab4-0c7bc73606c4" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di966982426159729775" cid="REL009" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:15:59" from="di801210789284053052" to="di674931362338818679">
+            <style class="default" />
+            <relation from="di801210789284053052" to="di674931362338818679">
+              <start-role id="umlar-fb03f3f2-72f5-438b-a3f6-2c8481b71754" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="umlar-5ca64aa5-b7a0-442e-90da-1a5504146fe7" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di447435645720265628" cid="REL010" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:16:49" from="di801210789284053052" to="di286053100666151377">
+            <style class="default" />
+            <relation from="di801210789284053052" to="di286053100666151377">
+              <start-role id="umlar-6456ec95-23d9-4c8c-ab63-ba9f4b12c447" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-8b316102-b38d-4aea-bac4-1c234794695a" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di901229382528733784" cid="REL013" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:19:49" from="di552018762748348876" to="di201416191395542443">
+            <style class="default" />
+            <relation from="di552018762748348876" to="di201416191395542443">
+              <start-role id="umlar-d11190d5-f6db-402f-b9ae-9b9cd4530dee" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-764c4d96-3e6c-45da-b9e6-72dd194f82ef" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" attribute-ref="a3da8e21747dc46039acb4143e9d10edb87" />
+            </relation>
+          </item>
+          <item id="di484791481316377011" cid="REL012" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:19:22" from="di552018762748348876" to="di801210789284053052">
+            <style class="default" />
+            <relation from="di552018762748348876" to="di801210789284053052">
+              <start-role id="umlar-4cbb759f-be21-45cf-ac62-4d2ad55c657d" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-87af0358-7852-4a7a-acd3-ddb7e62c74ca" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di124178695502728188" cid="REL014" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:20:08" from="di552018762748348876" to="di400803279104660323">
+            <style class="default" />
+            <relation from="di552018762748348876" to="di400803279104660323">
+              <start-role id="umlar-dbbec7c3-177c-4179-beaa-9e763f2095d2" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-fec7acd5-0eeb-4aa6-b17b-36e7d3ac69ca" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di995074258427163233" cid="REL015" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:20:34" from="di552018762748348876" to="di629170353277698333">
+            <style class="default" />
+            <relation from="di552018762748348876" to="di629170353277698333">
+              <start-role id="umlar-8ce367e4-9d74-477a-9b13-a4bed1225621" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-d07999a5-1635-4d7e-94f1-c8aca7f26a11" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di856677123276269128" cid="REL016" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:21:49" from="di970874752202207110" to="di201416191395542443">
+            <style class="default" />
+            <relation from="di970874752202207110" to="di201416191395542443">
+              <start-role id="umlar-7b326fbc-33a0-4cdb-86ec-b166c1043ac3" name="" multiplicity="1" navigability="" association-type="association" visibility="private" attribute-ref="abb0420c843814ae0bd5623890b85010c478" />
+              <end-role id="umlar-71968097-c80f-4b3a-8020-e91e32f08c2d" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di945465465601101130" cid="REL017" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:22:25" from="di970874752202207110" to="di552018762748348876">
+            <style class="default" />
+            <relation from="di970874752202207110" to="di552018762748348876">
+              <start-role id="umlar-6f47f78e-f6d4-4234-87b6-8ffe4c275ee1" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-d047e9ce-3a26-4b0d-9a51-a837e3dc49a9" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di672808209705979379" cid="REL018" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:22:41" from="di970874752202207110" to="di801210789284053052">
+            <style class="default" />
+            <relation from="di970874752202207110" to="di801210789284053052">
+              <start-role id="umlar-4ad51769-77bd-4ed2-a6c9-eb1bfbd33f47" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-204b13fd-7982-4026-b911-f50136456382" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" attribute-ref="a51b32f3dbbe046b394cc667ecfdb584d285" />
+            </relation>
+          </item>
+          <item id="di432885638398519004" cid="REL019" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:24:36" from="di400803279104660323" to="di189104715183803621">
+            <style class="default" />
+            <relation from="di400803279104660323" to="di189104715183803621">
+              <start-role id="umlar-bfe589b6-f728-4a85-a728-e6d793389b19" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-df8dd54f-8b4f-4b4b-8974-114de49b8b6f" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di426974588206838716" cid="DEP014" type="dependency" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:27:10" to="di945764800844796323">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di771873054781135214" cid="REL022" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:32:48" from="di383707912992018222" to="di854239372260616361">
+            <style class="default" />
+            <relation from="di383707912992018222" to="di854239372260616361">
+              <start-role id="umlar-f4fc5cc9-b101-48fa-8914-1775e08da29a" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="umlar-ad3db99f-41e9-40b5-8c9e-f7c2b816b87c" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di315852722229285175" cid="REL023" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pe451957681744cd686244d05eaae5d5a" creation-date="02/01/2018 17:33:13" from="di854239372260616361" to="di472066324751268661">
+            <style class="default" />
+            <relation from="di854239372260616361" to="di472066324751268661">
+              <start-role id="umlar-5cf91456-26bf-4df6-9728-bd353bdc71c2" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="umlar-9871fd40-e06a-4e9b-843e-8d2cf7137981" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer id="e963096809dd40be8aeacf6342baf378" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di311368503328895588" iid="a4a34a5f0b99423fa9e2fb5bbd269678" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="108" ay="74" awidth="231" aheight="115" x="108" y="74" width="231" height="115" />
+            <class />
+          </item>
+          <item id="di674931362338818679" iid="cc320e30d9e741e88c001ca391f568d8" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="391" ay="74" awidth="231" aheight="170" x="391" y="74" width="231" height="170" />
+            <class />
+          </item>
+          <item id="di962840401696801528" iid="e4f43cc3d77748b3839cf15960bf0954" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="674" ay="74" awidth="231" aheight="115" x="674" y="74" width="231" height="115" />
+            <class />
+          </item>
+          <item id="di101568317418211952" iid="bf6cb4ba7a614e6a8e9a6081dd5eeaa5" name-style="" creation-date="02/01/2018 13:52:56" order-index="1" type="entity">
+            <layout ax="957" ay="74" awidth="140" aheight="37" x="957" y="74" width="140" height="37" />
+            <class />
+          </item>
+          <item id="di189104715183803621" iid="bdf57aad084c441a92f17eef00b6a8f6" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="957" ay="140" awidth="231" aheight="133" x="957" y="140" width="231" height="133" />
+            <class />
+          </item>
+          <item id="di945764800844796323" iid="cece7148858743fea9c3cfd05da60c36" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="1240" ay="140" awidth="231" aheight="185" x="1240" y="140" width="231" height="185" />
+            <class />
+          </item>
+          <item id="di626846253361044231" iid="afa900402f3546a280259faf78b4c833" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="1523" ay="140" awidth="250" aheight="185" x="1523" y="140" width="250" height="185" />
+            <class />
+          </item>
+          <item id="di629170353277698333" iid="e2ca5f46a32f449582cf4a46872a623a" name-style="" creation-date="02/01/2018 13:44:59" order-index="0" type="entity">
+            <layout ax="1825" ay="140" awidth="276" aheight="150" x="1825" y="140" width="276" height="150" />
+            <class />
+          </item>
+          <item id="di201416191395542443" iid="97a65337a520461bb565c5244e8528f1" name-style="" creation-date="02/01/2018 14:20:31" order-index="2" type="entity">
+            <layout ax="436.5" ay="727" awidth="283" aheight="184" x="436.5" y="727" width="283" height="184" />
+            <class />
+          </item>
+          <item id="di400814183803792073" iid="68d59a43229a458dba2bf442ae8065e5" name-style="" creation-date="02/01/2018 14:24:30" order-index="3" type="entity">
+            <layout ax="421.5" ay="463" awidth="373" aheight="215" x="421.5" y="463" width="373" height="215" />
+            <class />
+          </item>
+          <item id="di801210789284053052" iid="694d12b0fe124156b8257ba6dfb47d4d" name-style="" creation-date="02/01/2018 14:29:32" order-index="4" type="entity">
+            <layout ax="905" ay="424" awidth="392" aheight="265" x="905" y="424" width="392" height="265" />
+            <class />
+          </item>
+          <item id="di400803279104660323" iid="6c548f7287bf4cfd91435fe9c7850b50" name-style="" creation-date="02/01/2018 14:34:43" order-index="5" type="entity">
+            <layout ax="1952" ay="399.5" awidth="350" aheight="289.5" x="1952" y="399.5" width="350" height="289.5" />
+            <class />
+          </item>
+          <item id="di552018762748348876" iid="e8c69cc04df24f608021c29c93d04b82" name-style="" creation-date="02/01/2018 14:38:37" order-index="6" type="entity">
+            <layout ax="905" ay="788" awidth="684" aheight="887" x="905" y="788" width="684" height="887" />
+            <class />
+          </item>
+          <item id="di286053100666151377" iid="6ea0a164f49e4eb0b0f75c2a48eb027a" name-style="" creation-date="02/01/2018 16:40:39" order-index="7" type="entity">
+            <layout ax="1368" ay="415" awidth="495" aheight="243" x="1368" y="415" width="495" height="243" />
+            <class />
+          </item>
+          <item id="di472066324751268661" iid="4af8f3799f6f419486a0f95f859d370c" name-style="" creation-date="02/01/2018 16:50:12" order-index="8" type="entity">
+            <layout ax="2964" ay="499" awidth="300" aheight="137.5" x="2964" y="499" width="300" height="137.5" />
+            <class />
+          </item>
+          <item id="di854239372260616361" iid="c6719735cb444cf6bce8902f2855411e" name-style="" creation-date="02/01/2018 16:50:12" order-index="8" type="entity">
+            <layout ax="2964" ay="730" awidth="300" aheight="149" x="2964" y="730" width="300" height="149" />
+            <class />
+          </item>
+          <item id="di383707912992018222" iid="a22cee55049a469aaac8ab89378ac149" name-style="" creation-date="02/01/2018 16:53:59" order-index="9" type="entity">
+            <layout ax="2981" ay="956" awidth="266" aheight="160" x="2981" y="956" width="266" height="160" />
+            <class />
+          </item>
+          <item id="di641489113153658457" iid="27031648ed0649d7bcc1368a56003634" name-style="" creation-date="02/01/2018 16:56:05" order-index="10" type="entity">
+            <layout ax="-323" ay="56.5" awidth="276" aheight="150" x="-323" y="56.5" width="276" height="150" />
+            <class />
+          </item>
+          <item id="di970874752202207110" iid="f71f40b8cfaf48f8be2ac0d5fd4f0b98" name-style="" creation-date="02/01/2018 16:58:08" order-index="11" type="entity">
+            <layout ax="1681" ay="798.5" awidth="529" aheight="334" x="1681" y="798.5" width="529" height="334" />
+            <class />
+          </item>
+          <item id="di975533752448161475" iid="d695d8baee12426e8a3387448dabda81" name-style="" creation-date="02/01/2018 17:13:05" order-index="12" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1072" y1="140" x2="1027" y2="111" start-border-pos="0.124458874458874" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="1072" y="140" />
+                <point x="1027" y="111" />
+              </points>
+            </layout>
+            <relation from="di189104715183803621" from-iid="bdf57aad084c441a92f17eef00b6a8f6" to="di101568317418211952" to-iid="bf6cb4ba7a614e6a8e9a6081dd5eeaa5" />
+          </item>
+          <item id="di269080351500498676" iid="67a0e48d22b040ce892829c2ab03bacd" name-style="" creation-date="02/01/2018 17:13:17" order-index="13" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1356" y1="140" x2="1097" y2="92" start-border-pos="0.125541125541126" end-border-pos="0.371621621621622" name-position="0,0">
+              <points>
+                <point x="1356" y="140" />
+                <point x="1097" y="92" />
+              </points>
+            </layout>
+            <relation from="di945764800844796323" from-iid="cece7148858743fea9c3cfd05da60c36" to="di101568317418211952" to-iid="bf6cb4ba7a614e6a8e9a6081dd5eeaa5" />
+          </item>
+          <item id="di110075901626269332" iid="17f87459f06943f79c115dc4c8b04a32" name-style="" creation-date="02/01/2018 17:13:21" order-index="14" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1648" y1="140" x2="1097" y2="93" start-border-pos="0.125" end-border-pos="0.378378378378378" name-position="0,0">
+              <points>
+                <point x="1648" y="140" />
+                <point x="1097" y="93" />
+              </points>
+            </layout>
+            <relation from="di626846253361044231" from-iid="afa900402f3546a280259faf78b4c833" to="di101568317418211952" to-iid="bf6cb4ba7a614e6a8e9a6081dd5eeaa5" />
+          </item>
+          <item id="di939549069796340555" iid="9be9b2a468ec4c0288b39463d0225591" name-style="" creation-date="02/01/2018 17:13:29" order-index="15" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="1963" y1="140" x2="1097" y2="92" start-border-pos="0.125" end-border-pos="0.371621621621622" name-position="0,0">
+              <points>
+                <point x="1963" y="140" />
+                <point x="1097" y="92" />
+              </points>
+            </layout>
+            <relation from="di629170353277698333" from-iid="e2ca5f46a32f449582cf4a46872a623a" to="di101568317418211952" to-iid="bf6cb4ba7a614e6a8e9a6081dd5eeaa5" to-field="namespace" />
+          </item>
+          <item id="di966982426159729775" iid="f406c5b537eb4acc9c3ebec81126a262" name-style="" creation-date="02/01/2018 17:15:59" order-index="17" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1101" y1="424" x2="506" y2="244" start-border-pos="0.125" end-border-pos="0.625541125541126" name-position="0,0">
+              <points>
+                <point x="1101" y="424" />
+                <point x="1100" y="376" />
+                <point x="506" y="375" />
+                <point x="506" y="244" />
+              </points>
+            </layout>
+            <relation from="di801210789284053052" from-iid="694d12b0fe124156b8257ba6dfb47d4d" to="di674931362338818679" to-iid="cc320e30d9e741e88c001ca391f568d8" />
+          </item>
+          <item id="di447435645720265628" iid="60a7e448cb794d0097a98ad05a4322d5" name-style="" creation-date="02/01/2018 17:16:49" order-index="18" type="relation">
+            <layout start-role-position="25,15" end-role-position="24.99998,-15.00003" start-multiplicity-position="25,-15" end-multiplicity-position="25,15.00003" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="1180" y1="424" x2="1615" y2="415" start-border-pos="0.175382653061225" end-border-pos="0.124747474747475" name-position="0,0">
+              <points>
+                <point x="1180" y="424" />
+                <point x="1180" y="385" />
+                <point x="1616" y="385" />
+                <point x="1615" y="415" />
+              </points>
+            </layout>
+            <relation from="di801210789284053052" from-iid="694d12b0fe124156b8257ba6dfb47d4d" from-field="control" to="di286053100666151377" to-iid="6ea0a164f49e4eb0b0f75c2a48eb027a" />
+          </item>
+          <item id="di484791481316377011" iid="69bf6c551a9649cd92aee07a76cdad85" name-style="" creation-date="02/01/2018 17:19:22" order-index="20" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1101" y1="788" x2="1101" y2="689" start-border-pos="0.0716374292969704" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="1101" y="788" />
+                <point x="1101" y="689" />
+              </points>
+            </layout>
+            <relation from="di552018762748348876" from-iid="e8c69cc04df24f608021c29c93d04b82" to="di801210789284053052" to-iid="694d12b0fe124156b8257ba6dfb47d4d" />
+          </item>
+          <item id="di901229382528733784" iid="eb83e53fc1f4465b8139457392b36b74" name-style="" creation-date="02/01/2018 17:19:49" order-index="21" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15.00002" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="905" y1="841" x2="720" y2="832" start-border-pos="0.985062006764374" end-border-pos="0.391983695652174" name-position="0,0" name-width="50">
+              <points>
+                <point x="905" y="841" />
+                <point x="720" y="832" />
+              </points>
+            </layout>
+            <relation from="di552018762748348876" from-iid="e8c69cc04df24f608021c29c93d04b82" to="di201416191395542443" to-iid="97a65337a520461bb565c5244e8528f1" to-field="a3da8e21747dc46039acb4143e9d10edb87" />
+          </item>
+          <item id="di124178695502728188" iid="4136d2f1da834c338536de3a52d27cb6" name-style="" creation-date="02/01/2018 17:20:08" order-index="22" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25.00016,15.00006" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1247" y1="788" x2="2127" y2="689" start-border-pos="0.125" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="1247" y="788" />
+                <point x="1245" y="736" />
+                <point x="2126" y="730" />
+                <point x="2127" y="689" />
+              </points>
+            </layout>
+            <relation from="di552018762748348876" from-iid="e8c69cc04df24f608021c29c93d04b82" to="di400803279104660323" to-iid="6c548f7287bf4cfd91435fe9c7850b50" />
+          </item>
+          <item id="di995074258427163233" iid="f00cb3b427db4ae7ab8590d1433967bc" name-style="" creation-date="02/01/2018 17:20:34" order-index="23" type="relation">
+            <layout start-role-position="25,15" end-role-position="-52.81791,-118.0066" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1520" y1="788" x2="1963" y2="290" start-border-pos="0.224780701754386" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="1520" y="788" />
+                <point x="1521" y="705" />
+                <point x="1911" y="704" />
+                <point x="1918" y="345" />
+                <point x="1962" y="343" />
+                <point x="1963" y="290" />
+              </points>
+            </layout>
+            <relation from="di552018762748348876" from-iid="e8c69cc04df24f608021c29c93d04b82" to="di629170353277698333" to-iid="e2ca5f46a32f449582cf4a46872a623a" />
+          </item>
+          <item id="di856677123276269128" iid="dde53f3d6a534d62aa5121fa5b41f3da" name-style="" creation-date="02/01/2018 17:21:49" order-index="24" type="relation">
+            <layout start-role-position="25,15" end-role-position="24.99999,-15.00001" start-multiplicity-position="25.00001,-15" end-multiplicity-position="25.00115,16.00001" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="1681" y1="868" x2="720" y2="761" start-border-pos="0.947604790419162" end-border-pos="0.296195652173913" name-position="0,0">
+              <points>
+                <point x="1681" y="868" />
+                <point x="1618" y="869" />
+                <point x="1622" y="762" />
+                <point x="720" y="761" />
+              </points>
+            </layout>
+            <relation from="di970874752202207110" from-iid="f71f40b8cfaf48f8be2ac0d5fd4f0b98" from-field="abb0420c843814ae0bd5623890b85010c478" to="di201416191395542443" to-iid="97a65337a520461bb565c5244e8528f1" />
+          </item>
+          <item id="di945465465601101130" iid="385cc25ba6c041e596ab84ad498c2ef3" name-style="" creation-date="02/01/2018 17:22:25" order-index="25" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1681" y1="923" x2="1589" y2="921" start-border-pos="0.906811377245509" end-border-pos="0.287485907553551" name-position="0,0">
+              <points>
+                <point x="1681" y="923" />
+                <point x="1589" y="921" />
+              </points>
+            </layout>
+            <relation from="di970874752202207110" from-iid="f71f40b8cfaf48f8be2ac0d5fd4f0b98" to="di552018762748348876" to-iid="e8c69cc04df24f608021c29c93d04b82" />
+          </item>
+          <item id="di672808209705979379" iid="c31ab69b109944338ac66912a85f8bb3" name-style="" creation-date="02/01/2018 17:22:41" order-index="26" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="24.99998,-15.00002" end-multiplicity-position="23.07192,16.1086" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="1946" y1="798" x2="1297" y2="544" start-border-pos="0.12523629489603" end-border-pos="0.363679245283019" name-position="0,0">
+              <points>
+                <point x="1946" y="798" />
+                <point x="1949" y="758" />
+                <point x="1712" y="762" />
+                <point x="1710" y="689" />
+                <point x="1325" y="690" />
+                <point x="1326" y="546" />
+                <point x="1297" y="544" />
+              </points>
+            </layout>
+            <relation from="di970874752202207110" from-iid="f71f40b8cfaf48f8be2ac0d5fd4f0b98" to="di801210789284053052" to-iid="694d12b0fe124156b8257ba6dfb47d4d" to-field="a51b32f3dbbe046b394cc667ecfdb584d285" />
+          </item>
+          <item id="di432885638398519004" iid="9cf733517a6a47efac8f087b66f662c2" name-style="" creation-date="02/01/2018 17:24:36" order-index="27" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25.00002,-14.9998" end-multiplicity-position="25.00003,15.00002" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="2127" y1="400" x2="1072" y2="273" start-border-pos="0.125" end-border-pos="0.625541125541126" name-position="0,0">
+              <points>
+                <point x="2127" y="400" />
+                <point x="2128" y="360" />
+                <point x="1069" y="356" />
+                <point x="1072" y="273" />
+              </points>
+            </layout>
+            <relation from="di400803279104660323" from-iid="6c548f7287bf4cfd91435fe9c7850b50" to="di189104715183803621" to-iid="bdf57aad084c441a92f17eef00b6a8f6" />
+          </item>
+          <item id="di426974588206838716" iid="56a3e0b58a6a41059d0ec7772da0c05b" name-style="" creation-date="02/01/2018 17:27:10" order-index="28" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1356" y1="325" x2="1356" y2="325" start-border-pos="0.63961038961039" end-border-pos="0.624458874458874" name-position="15,-72">
+              <points>
+                <point x="1356" y="325" />
+                <point x="1355.5" y="788" />
+                <point x="1356" y="375" />
+                <point x="1356" y="325" />
+              </points>
+            </layout>
+            <relation to="di945764800844796323" to-iid="cece7148858743fea9c3cfd05da60c36" />
+          </item>
+          <item id="di538384548972137202" iid="c8ef162ec5f3411da335f76c52e186ba" name-style="" creation-date="02/01/2018 17:29:06" order-index="29" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-47" y1="132" x2="108" y2="132" start-border-pos="0.375833333333333" end-border-pos="0.873913043478261" name-position="0,0">
+              <points>
+                <point x="-47" y="132" />
+                <point x="108" y="132" />
+              </points>
+            </layout>
+            <relation from="di641489113153658457" from-iid="27031648ed0649d7bcc1368a56003634" to="di311368503328895588" to-iid="a4a34a5f0b99423fa9e2fb5bbd269678" />
+          </item>
+          <item id="di771873054781135214" iid="92b6b84a1d4a4bb19be40f7e89d8d0e3" name-style="" creation-date="02/01/2018 17:32:48" order-index="30" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="3114" y1="956" x2="3114" y2="879" start-border-pos="0.125" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="3114" y="956" />
+                <point x="3114" y="879" />
+              </points>
+            </layout>
+            <relation from="di383707912992018222" from-iid="a22cee55049a469aaac8ab89378ac149" to="di854239372260616361" to-iid="c6719735cb444cf6bce8902f2855411e" />
+          </item>
+          <item id="di315852722229285175" iid="9063c130d8344311b5238d7f56dd116d" name-style="" creation-date="02/01/2018 17:33:13" order-index="31" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="3114" y1="730" x2="3114" y2="636" start-border-pos="0.125" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="3114" y="730" />
+                <point x="3114" y="636" />
+              </points>
+            </layout>
+            <relation from="di854239372260616361" from-iid="c6719735cb444cf6bce8902f2855411e" to="di472066324751268661" to-iid="4af8f3799f6f419486a0f95f859d370c" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
