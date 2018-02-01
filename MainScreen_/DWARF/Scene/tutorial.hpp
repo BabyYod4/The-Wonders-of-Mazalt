@@ -10,9 +10,9 @@ class tutorial {
 private:
 	sf::RenderWindow & window;
 	camera & cam;
-	player_data<20, 20, true> & oof_inside;
+	player_data<20, 20> & oof_inside;
 	game_map<20, 20> & tut_map;
-	player_data<60, 60> & oof_outside;
+	player_data<60, 60, true, true> & oof_outside;
 	game_map<60, 60> & map;
 
 	sf::Texture texture_subs;
@@ -25,9 +25,9 @@ public:
 	tutorial( 
 		sf::RenderWindow & window,
 		camera & cam,
-		player_data<20, 20, true> & oof_inside,
+		player_data<20, 20> & oof_inside,
 		game_map<20, 20> & tut_map,
-		player_data<60, 60> & oof_outside,
+		player_data<60, 60, true, true> & oof_outside,
 		game_map<60, 60> & map
 	):
 		window(window),

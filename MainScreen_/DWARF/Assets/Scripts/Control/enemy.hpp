@@ -38,6 +38,11 @@ public:
 		_calc();
 	}
 
+	void set_pos(const int & x, const int & y) {
+		pos.pos_x = x;
+		pos.pos_y = y;
+	}
+
 	bool player_detected(const tile_coordinate & player_pos) {
 		if ((player_pos.pos_x >= begin.x && player_pos.pos_x <= (begin.x + sight_range.x)) && (player_pos.pos_y >= begin.y && player_pos.pos_y <= end.y)) {
 			return true;

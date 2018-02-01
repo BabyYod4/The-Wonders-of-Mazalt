@@ -75,7 +75,7 @@ int main(void) {
 		sf::Vector2i{10,10}
 	);
 
-	player_data< 20, 20, true > player0(
+	player_data< 20, 20 > player0(
 		window,
 		cam,
 		tut_level,
@@ -91,7 +91,7 @@ int main(void) {
 
 
 
-	player_data< 60, 60 > player1(
+	player_data< 60, 60, true, true > player1(
 		window, 
 		cam, 
 		level, 
