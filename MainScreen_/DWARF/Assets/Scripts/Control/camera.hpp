@@ -21,12 +21,13 @@ public:
 		window(window),
 		size(size),
 		pos(pos)
-	{
+	{}
+
+	void init() {
 		viewport.setSize(size);
 		viewport.setCenter(pos);
 		window.setView(viewport);
 	}
-
 
 	void set_center(const sf::Vector2f & new_center) {
 		viewport.setCenter(new_center);

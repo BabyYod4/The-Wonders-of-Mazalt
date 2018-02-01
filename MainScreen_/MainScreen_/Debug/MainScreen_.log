@@ -1,8 +1,11 @@
 ﻿D:\Microsoft Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MainScreen_.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
-c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(25): note: while compiling class template member function 'void map_tile_matrix<60,60>::init(void)'
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(74): note: see reference to function template instantiation 'void map_tile_matrix<60,60>::init(void)' being compiled
-  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\game_map.hpp(13): note: see reference to class template instantiation 'map_tile_matrix<60,60>' being compiled
-  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(50): note: see reference to class template instantiation 'game_map<60,60>' being compiled
-  MainScreen_.vcxproj -> C:\ti-software\The wonders of Mazalt\MainScreen_\Debug\The Wonders of Mazalt.exe
+c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(33): note: while compiling class template member function 'void map_tile_matrix<29,70>::init(void)'
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\entity\map_tile_matrix.hpp(84): note: see reference to function template instantiation 'void map_tile_matrix<29,70>::init(void)' being compiled
+  c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\game_map.hpp(13): note: see reference to class template instantiation 'map_tile_matrix<29,70>' being compiled
+  c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(83): note: see reference to class template instantiation 'game_map<29,70>' being compiled
+c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(210): warning C4715: '<lambda_e25cedf4ce9dd55208a18e8b396ab8cd>::operator()': not all control paths return a value
+c:\ti-software\the wonders of mazalt\mainscreen_\dwarf\assets\scripts\control\player_data.hpp(542): warning C4715: 'player_data<60,60,1,0>::start_indicator': not all control paths return a value
+c:\ti-software\the wonders of mazalt\mainscreen_\mainscreen_\main.cpp(219): warning C4715: '<lambda_5e65bee7b925e3da50f4d005b5ee5e65>::operator()': not all control paths return a value
+  MainScreen_.vcxproj -> C:\ti-software\The Wonders of Mazalt\MainScreen_\Debug\The Wonders of Mazalt.exe

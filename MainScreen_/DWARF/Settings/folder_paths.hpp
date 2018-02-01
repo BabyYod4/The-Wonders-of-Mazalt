@@ -15,7 +15,7 @@ std::string TEXTURES = ASSETS + "Textures/";
 std::string LIBRARY = DWARF_PATH + "Library/";
 
 std::string SCENE = DWARF_PATH + "Scene/";
-std::string CAMERAS = SCENE + "Cameras/";
+std::string IMAGES = SCENE + "Images/";
 std::string UI = SCENE + "UI/";
 
 #endif // FOLDER_PATH_HPP
