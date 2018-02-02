@@ -1,3 +1,9 @@
+/*
+@file game_state_engine.hpp
+@author Arsalan Anwari
+@brief This file contains the game_state_manager controller class
+*/
+
 #ifndef GAME_STATE_ENGINE_HPP
 #define GAME_STATE_ENGINE_HPP
 
@@ -5,6 +11,9 @@
 #include <vector>
 #include <string>
 
+/*
+@brief This class is responsible for the game state logic
+*/
 class game_state_engine{
 private: 
 	std::vector< state > & states;
@@ -15,7 +24,11 @@ public:
 		states(states)
 	{}
 
-	
+	/*
+	@brief This function is used to start the game state manager
+	@param void
+	@return void
+	*/
 	void check_state() {
 		state & data = states[current];
 

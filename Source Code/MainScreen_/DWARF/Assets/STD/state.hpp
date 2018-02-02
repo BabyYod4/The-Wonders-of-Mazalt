@@ -1,3 +1,10 @@
+/*
+@file state.hpp
+@author Arsalan Anwari
+@author Leon Zhang
+@brief This is an abstract data type used by the game_state_manager
+*/
+
 #ifndef STATE_HPP
 #define STATE_HPP
 

@@ -1,3 +1,9 @@
+/*
+@file tile_coordinate.hpp
+@author Arsalan Anwari
+@brief This is an abstract data type used by the player_data class to as coordinates
+*/
+
 #ifndef TILE_COORDINATE_HPP
 #define TILE_COORDINATE_HPP
 

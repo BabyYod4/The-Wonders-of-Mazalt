@@ -1,7 +1,16 @@
+/*
+@file settings.hpp
+@author Arsalan Anwari
+@brief This is an file with mutlple abstract data types used by multiple control classes as a means to passtrough parameters
+@details There are multiple namespaces used to indicate what control class they belong to
+*/
+
+
 #ifndef SETTINGS_HPP
 #define SETTINGS_HPP
 
 #include <string>
+#include <vector>
 #include <SFML/System/Vector2.hpp>
 #include <Assets\Scripts\ADT\tile_coordinate.hpp>
 
@@ -22,6 +31,7 @@ namespace settings {
 
 		struct options {
 			int data_id;
+			std::vector<int> entrance_id;
 			std::string data_folder;
 			std::string sprite_folder;
 			sf::Vector2i tile_size;
@@ -55,8 +65,8 @@ namespace settings {
 			tile_coordinate player_pos;
 			std::string player_sprite_map;
 			std::string player_sprite_file_extention;
-			std::string weapon_sprite_map;
-			std::string weapon_sprite_file_extention;
+			std::string weapon_sprite_map = "";
+			std::string weapon_sprite_file_extention = "";
 		};
 	
 	

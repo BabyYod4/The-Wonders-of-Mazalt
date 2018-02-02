@@ -1,3 +1,9 @@
+/*
+@file scene_engine.hpp
+@author Arsalan Anwari
+@brief This file contains the scene engine controller class
+*/
+
 #ifndef SCENE_ENGINE
 #define SCENE_ENGINE
 
@@ -5,6 +11,9 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
+/*
+@brief This class is responsible for the scene logic
+*/
 class scene_engine {
 private:
 	sf::RenderWindow & window;
@@ -17,7 +26,11 @@ public:
 		scenes(scenes)
 	{}
 
-
+	/*
+	@brief This function is used to start the scene engine
+	@param void
+	@return void
+	*/
 	void start() {
 		for (auto & s : scenes) {
 			window.clear();
